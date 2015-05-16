@@ -14,5 +14,6 @@ name="connection.url">jdbc:mysql://localhost/hcdb</property>
 <!--Mapeo Entidades -->
 <mapping resource="mapeos/Consulta.hbm.xml"/>
 <mapping resource="mapeos/Paciente.hbm.xml"/>
+<mapping resource="mapeos/categoriaDeConsulta.hbm.xml"/>
 </session-factory>
 </hibernate-configuration>
