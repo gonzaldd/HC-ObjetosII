@@ -2,11 +2,11 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<class name="datos.categoriaDeConsulta" table="categoriaDeConsulta">
+<class name="datos.categoriaDeConsulta" table="categoriadeconsulta">
 <id column="idCategoriaDeConsulta" name="idCategoriaDeConsulta">
 <generator class="identity"/>
 </id>
-<property column="categoriaDeConsulta" name="categoriaDeConsulta" type="string"/>
+<property column="nombreCategoriaDeConsulta" name="nombreCategoriaDeConsulta" type="string"/>
 <many-to-one name="consulta" class="datos.Consulta" column="idConsulta" not-null="true"/>
 </class>
 </hibernate-mapping>

@@ -6,7 +6,6 @@
 <id column="idPaciente" name="idPaciente">
 <generator class="identity"/>
 </id>
-<property column="fechaDeAtencion" name="fechaDeAtencion" type="calendar"/>
 <property column="nombrePaciente" name="nombrePaciente" type="string"/>
 <property column="apellidoPaciente" name="apellidoPaciente" type="string"/>
 <property column="activoPaciente" name="activoPaciente" type="boolean"/>

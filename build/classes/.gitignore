@@ -1,5 +1,5 @@
 /dao/
 /datos/
-/hibernate.cfg.xml
-/mapeos/
 /negocio/
+/controladores/
+/mapeos/
