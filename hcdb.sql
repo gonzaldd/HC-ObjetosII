@@ -1,4 +1,4 @@
-hcdb-- MySQL Workbench Forward Engineering
+
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `hcdb`.`profesional` (
   `idProfesional` INT(11) NOT NULL AUTO_INCREMENT,
   `idEspecialidad` INT(11) NOT NULL,
   `matriculaProfesional` INT(11) NOT NULL,
-  `activoProfesional` TINYINT(1) NOT NULL,
+  `activoProfesional` BOOL NOT NULL,
   PRIMARY KEY (`idProfesional`, `idEspecialidad`),
   UNIQUE INDEX `idProfesional_UNIQUE` (`idProfesional` ASC),
   INDEX `idEspecialidad_idx` (`idEspecialidad` ASC),
@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `hcdb`.`paciente` (
   `idPaciente` INT(11) NOT NULL AUTO_INCREMENT,
   `nombrePaciente` VARCHAR(45) NOT NULL,
   `apellidoPaciente` VARCHAR(45) NOT NULL,
-  `activoPaciente` TINYINT(1) NOT NULL,
+  `activoPaciente` BOOL NOT NULL,
   `dniPaciente` INT(11) NOT NULL,
   PRIMARY KEY (`idPaciente`))
 ENGINE = InnoDB
@@ -174,7 +174,7 @@ CREATE TABLE IF NOT EXISTS `hcdb`.`login` (
   `ultimoIngresoLogin` DATETIME NOT NULL,
   `ultimoCambioClaveLogin` VARCHAR(45) NOT NULL,
   `tipoUsuario` INT(11) NOT NULL,
-  `activoLogin` TINYINT(1) NOT NULL,
+  `activoLogin` BOOL NOT NULL,
   PRIMARY KEY (`idLogin`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -211,3 +211,20 @@ DEFAULT CHARACTER SET = utf8;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+insert into login values(1,1,'1234','2000-01-01', '2002-01-01', 1,1);
+
+insert into paciente values(1,'seba','casca',1,22222222);
+insert into categoriadeconsulta values(1,'1');
+
+insert into contactopaciente values(1,'44444','holaaa 123', 'eedef@ref.com','1900-01-01','arg');
+
+insert into area values(1,'urgencias','holaaaa');
+insert into especialidad values(1,1,'cradiologo', 'holaaaa');
+
+insert into profesional values(1,1,1111,1);
+insert into usuario values(1,1,'pepe', 'luis', 55555555, 1);
+
+insert into contactoprofesional values(1,'33333','holaaaaa 456', 'prof@gfdgdf.com', '1800-01-01');
+insert into consulta values(1,1,1,1,'2000-12-02','gripe');
