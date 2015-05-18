@@ -4,22 +4,20 @@
 <hibernate-mapping>
 <class name="datos.Paciente" table="paciente">
 	<id column="idPaciente" name="idPaciente">
-		<generator class="foreign">             
-        	<param name="property">contacto</param> 
-    	</generator>
+		<generator class="identity"/>             
 	</id>
 	<property column="nombrePaciente" name="nombrePaciente" type="string"/>
 	<property column="apellidoPaciente" name="apellidoPaciente" type="string"/>
 	<property column="activoPaciente" name="activoPaciente" type="boolean"/>
 	<property column="dniPaciente" name="dniPaciente" type="int"/>
 
-	<set name="consulta" table="consulta" inverse="true" lazy="true" fetch="select">
+	<set name="consultas" table="consulta" inverse="true" lazy="true" fetch="select">
 		<key>
 			<column name="idConsulta" not-null="true" />
 		</key>
 		<one-to-many class="datos.Consulta" />
 	</set>
-	<one-to-one name="contacto" />
+	<one-to-one name="contacto" class="datos.ContactoPaciente"/>
 
 </class>
 </hibernate-mapping>

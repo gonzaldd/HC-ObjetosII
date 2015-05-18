@@ -2,15 +2,15 @@ package datos;
 
 import java.util.Set;
 
-public class CategoriaDeConsulta {
+public class categoriaDeConsulta {
 
 	private int idCategoriaDeConsulta;
 	private String nombreCategoriaDeConsulta;
 	private Set<Consulta> consultas;
 
-	public CategoriaDeConsulta(){}
+	public categoriaDeConsulta(){}
 
-	public CategoriaDeConsulta(String nombreCategoriaDeConsulta) {
+	public categoriaDeConsulta(String nombreCategoriaDeConsulta) {
 		super();
 		this.nombreCategoriaDeConsulta = nombreCategoriaDeConsulta;
 	}
@@ -20,7 +20,7 @@ public class CategoriaDeConsulta {
 	}
 
 
-	public void setIdCategoriaDeConsulta(int idCategoriaDeConsulta) {
+	private void setIdCategoriaDeConsulta(int idCategoriaDeConsulta) {
 		this.idCategoriaDeConsulta = idCategoriaDeConsulta;
 	}
 

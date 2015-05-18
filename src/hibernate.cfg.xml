@@ -2,18 +2,20 @@
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD
 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-<session-factory>
-<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-<property
-name="connection.url">jdbc:mysql://localhost/hcdb</property>
-<property name="connection.username">root</property>
-<property name="connection.password">root</property>
-<property name="connection.pool_size">1</property>
-<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-<property name="show_sql">true</property> <!-- en true muestra hql en consola-->
+	<session-factory>
+ 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost/hcdb</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+		<property name="connection.pool_size">1</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="show_sql">true</property> <!-- en true muestra hql en consola-->
 <!--Mapeo Entidades -->
-<!--<mapping resource="mapeos/Consulta.hbm.xml"/>
-<mapping resource="mapeos/Paciente.hbm.xml"/>-->
-<mapping resource="mapeos/categoriaDeConsulta.hbm.xml"/>
-</session-factory>
+		<mapping resource="mapeos/Consulta.hbm.xml"/>
+		<mapping resource="mapeos/Paciente.hbm.xml"/>
+		<!--<mapping resource="mapeos/categoriaDeConsulta.hbm.xml"/>-->
+		<!--<mapping resource="mapeos/Area.hbm.xml"/>-->
+		<!--<mapping resource="mapeos/Especialidad.hbm.xml"/>-->
+		<mapping resource="mapeos/ContactoPaciente.hbm.xml"/>
+	</session-factory>
 </hibernate-configuration>

@@ -4,7 +4,9 @@
 <hibernate-mapping>
 	<class name="datos.ContactoPaciente" table="contactopaciente">
 		<id name="idPaciente" column="idPaciente">         
-    		<generator class="identity"/>
+    		<generator class="foreign">
+				<param name="property">paciente</param>
+		</generator>
 		</id>
 	
 	<property column="telefonoPaciente" name="telefonoPaciente" type="string"/>
@@ -13,5 +15,6 @@
 	<property column="fechaDeNacimientoPaciente" name="fechaDeNacimientoPaciente" type="calendar"/>
 	<property column="nacionalidadPaciente" name="nacionalidadPaciente" type="string"/>
 	
+	<one-to-one name="paciente" class="datos.Paciente"/>
 	</class>
 </hibernate-mapping>

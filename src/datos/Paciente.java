@@ -70,5 +70,12 @@ public class Paciente {
 		this.contacto = contacto;
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Nombre: "+this.nombrePaciente;
+	}
+
+	
 	
 }

@@ -3,16 +3,14 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-<class name="datos.Especialidad" table="especialidad">
-<id column="idEspecialidad" name="idEspecialidad">
-<generator class="identity"/>
-</id>
+	<class name="datos.Especialidad" table="especialidad">
+		<id column="idEspecialidad" name="idEspecialidad">
+			<generator class="identity"/>
+		</id>
 
-<!--<property column="idArea" name="idArea" type="int"/>-->
-<property column="nombreEspecialidad" name="nombreEspecialidad" type="string"/>
-<property column="descripcionEspecialidad" name="descripcionEspecialidad" type="string"/>
-
-
-
-</class>
+		<property column="nombreEspecialidad" name="nombreEspecialidad" type="string"/>
+		<property column="descripcionEspecialidad" name="descripcionEspecialidad" type="string"/>
+		<!--<many-to-one name="area" class="datos.Area" column="idArea" not-null="true"/>-->
+		
+	</class>
 </hibernate-mapping>

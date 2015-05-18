@@ -10,6 +10,7 @@ public class ContactoPaciente {
 	private String mailPaciente;
 	private GregorianCalendar fechaDeNacimientoPaciente;
 	private String nacionalidadPaciente;
+	private Paciente paciente;
 	
 	public ContactoPaciente() {}
 	
@@ -70,5 +71,15 @@ public class ContactoPaciente {
 	public void setNacionalidadPaciente(String nacionalidadPaciente) {
 		this.nacionalidadPaciente = nacionalidadPaciente;
 	}
+
+	public Paciente getPaciente() {
+		return paciente;
+	}
+
+	public void setPaciente(Paciente paciente) {
+		this.paciente = paciente;
+	}
+	
+	
 
 }

@@ -6,7 +6,7 @@ public class Consulta {
 	private int idConsulta;
 	private Paciente paciente;
 	//private Profesional idProfesional;
-	private CategoriaDeConsulta categoriaDeConsulta;
+	private categoriaDeConsulta categoriaDeConsulta;
 	private GregorianCalendar fechaDeAtencion;
 	private String diagnostico; //VER EQUIVALENTE A VARCHAR
 	
@@ -24,7 +24,7 @@ public class Consulta {
 		return idConsulta;
 	}
 
-	public void setIdConsulta(int idConsulta) {
+	private void setIdConsulta(int idConsulta) {
 		this.idConsulta = idConsulta;
 	}
 	
@@ -36,11 +36,11 @@ public class Consulta {
 		this.paciente = paciente;
 	}
 
-	public CategoriaDeConsulta getCategoriaDeConsulta() {
+	public categoriaDeConsulta getCategoriaDeConsulta() {
 		return categoriaDeConsulta;
 	}
 
-	public void setCategoriaDeConsulta(CategoriaDeConsulta categoriaDeConsulta) {
+	public void setCategoriaDeConsulta(categoriaDeConsulta categoriaDeConsulta) {
 		this.categoriaDeConsulta = categoriaDeConsulta;
 	}
 
@@ -58,6 +58,12 @@ public class Consulta {
 
 	public void setDiagnostico(String diagnostico) {
 		this.diagnostico = diagnostico;
+	}
+
+	@Override
+	public String toString() {
+		
+		return "ID: "+this.idConsulta+"\nDiagnostico: "+this.diagnostico;
 	}
 	
 	
