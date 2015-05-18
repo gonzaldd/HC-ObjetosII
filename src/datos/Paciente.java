@@ -9,6 +9,7 @@ public class Paciente {
 	private String apellidoPaciente;
 	private boolean activoPaciente;
 	private int dniPaciente;
+	private ContactoPaciente contacto;
 	private Set<Consulta> consultas;
 
 	public Paciente() {}
@@ -61,4 +62,13 @@ public class Paciente {
 		this.consultas = consultas;
 	}
 
+	public ContactoPaciente getContacto() {
+		return contacto;
+	}
+
+	public void setContacto(ContactoPaciente contacto) {
+		this.contacto = contacto;
+	}
+
+	
 }

@@ -3,18 +3,23 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 <class name="datos.Paciente" table="paciente">
-<id column="idPaciente" name="idPaciente">
-<generator class="identity"/>
-</id>
-<property column="nombrePaciente" name="nombrePaciente" type="string"/>
-<property column="apellidoPaciente" name="apellidoPaciente" type="string"/>
-<property column="activoPaciente" name="activoPaciente" type="boolean"/>
-<property column="dniPaciente" name="dniPaciente" type="int"/>
-<set name="consulta" table="consulta" inverse="true" lazy="true" fetch="select">
-	<key>
-		<column name="idConsulta" not-null="true" />
-	</key>
-	<one-to-many class="datos.Consulta" />
-</set>
+	<id column="idPaciente" name="idPaciente">
+		<generator class="foreign">             
+        	<param name="property">contacto</param> 
+    	</generator>
+	</id>
+	<property column="nombrePaciente" name="nombrePaciente" type="string"/>
+	<property column="apellidoPaciente" name="apellidoPaciente" type="string"/>
+	<property column="activoPaciente" name="activoPaciente" type="boolean"/>
+	<property column="dniPaciente" name="dniPaciente" type="int"/>
+
+	<set name="consulta" table="consulta" inverse="true" lazy="true" fetch="select">
+		<key>
+			<column name="idConsulta" not-null="true" />
+		</key>
+		<one-to-many class="datos.Consulta" />
+	</set>
+	<one-to-one name="contacto" />
+
 </class>
 </hibernate-mapping>
