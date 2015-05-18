@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="datos.Especialidad" table="especialidad">
+<id column="idEspecialidad" name="idEspecialidad">
+<generator class="identity"/>
+</id>
+
+<!--<property column="idArea" name="idArea" type="int"/>-->
+<property column="nombreEspecialidad" name="nombreEspecialidad" type="string"/>
+<property column="descripcionEspecialidad" name="descripcionEspecialidad" type="string"/>
+
+
+
+</class>
+</hibernate-mapping>

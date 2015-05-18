@@ -5,19 +5,21 @@ import java.util.GregorianCalendar;
 public class ContactoPaciente {
 
 	private int idPaciente;
-	private String telefono;
-	private String direccion;
-	private String mail;
-	private GregorianCalendar fechaDeNacimiento;
+	private String telefonoPaciente;
+	private String direccionPaciente;
+	private String mailPaciente;
+	private GregorianCalendar fechaDeNacimientoPaciente;
+	private String nacionalidadPaciente;
 	
 	public ContactoPaciente() {}
 	
-	public ContactoPaciente(String telefono, String direccion, String mail, GregorianCalendar fechaDeNacimiento) {
+	public ContactoPaciente(String telefono, String direccion, String mail, GregorianCalendar fechaDeNacimiento, String nacionalidad) {
 		super();
-		this.telefono = telefono;
-		this.direccion = direccion; 
-		this.mail = mail;
-		this.fechaDeNacimiento = fechaDeNacimiento;
+		this.telefonoPaciente = telefono;
+		this.direccionPaciente = direccion; 
+		this.mailPaciente = mail;
+		this.fechaDeNacimientoPaciente = fechaDeNacimiento;
+		this.nacionalidadPaciente= nacionalidad;
 	}
 
 	public int getIdPaciente() {
@@ -28,37 +30,45 @@ public class ContactoPaciente {
 		this.idPaciente = idPaciente;
 	}
 
-	public String getTelefono() {
-		return telefono;
+	public String getTelefonoPaciente() {
+		return telefonoPaciente;
 	}
 
-	public void setTelefono(String telefono) {
-		this.telefono = telefono;
+	public void setTelefonoPaciente(String telefonoPaciente) {
+		this.telefonoPaciente = telefonoPaciente;
 	}
 
-	public String getDireccion() {
-		return direccion;
+	public String getDireccionPaciente() {
+		return direccionPaciente;
 	}
 
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
+	public void setDireccionPaciente(String direccionPaciente) {
+		this.direccionPaciente = direccionPaciente;
 	}
 
-	public String getMail() {
-		return mail;
+	public String getMailPaciente() {
+		return mailPaciente;
 	}
 
-	public void setMail(String mail) {
-		this.mail = mail;
+	public void setMailPaciente(String mailPaciente) {
+		this.mailPaciente = mailPaciente;
 	}
 
-	public GregorianCalendar getFechaDeNacimiento() {
-		return fechaDeNacimiento;
+	public GregorianCalendar getFechaDeNacimientoPaciente() {
+		return fechaDeNacimientoPaciente;
 	}
 
-	public void setFechaDeNacimiento(GregorianCalendar fechaDeNacimiento) {
-		this.fechaDeNacimiento = fechaDeNacimiento;
+	public void setFechaDeNacimientoPaciente(
+			GregorianCalendar fechaDeNacimientoPaciente) {
+		this.fechaDeNacimientoPaciente = fechaDeNacimientoPaciente;
 	}
-	
-	
+
+	public String getNacionalidadPaciente() {
+		return nacionalidadPaciente;
+	}
+
+	public void setNacionalidadPaciente(String nacionalidadPaciente) {
+		this.nacionalidadPaciente = nacionalidadPaciente;
+	}
+
 }

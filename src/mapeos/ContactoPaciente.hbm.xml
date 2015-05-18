@@ -7,10 +7,11 @@
     		<generator class="identity"/>
 		</id>
 	
-	<property column="telefono" name="telefono" type="string"/>
-	<property column="direccion" name="nombrePaciente" type="string"/>
-	<property column="mail" name="nombrePaciente" type="string"/>
-	<property column="fechaDeNacimiento" name="fechaDeNacimiento" type="calendar"/>
+	<property column="telefonoPaciente" name="telefonoPaciente" type="string"/>
+	<property column="direccionPaciente" name="direccionPaciente" type="string"/>
+	<property column="mailPaciente" name="mailPaciente" type="string"/>
+	<property column="fechaDeNacimientoPaciente" name="fechaDeNacimientoPaciente" type="calendar"/>
+	<property column="nacionalidadPaciente" name="nacionalidadPaciente" type="string"/>
 	
 	</class>
 </hibernate-mapping>
