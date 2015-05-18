@@ -5,10 +5,10 @@ pageEncoding="ISO-8859-1"%>
 <TABLE border="0" width="100%">
 <TR>
 <TD align="left">
-<IMG src="/HC-ObjetosII/img/yingyang.jpg">
+<IMG src="img/yingyang.jpg">
 </TD>
 <TD align="center">
-<H1>Hospital PEPITO</H1>
+<H1>Hospital Nuevo</H1>
 </TD>
 </TR>
 </TABLE>

@@ -14,7 +14,7 @@ pageEncoding="ISO-8859-1"%>
 <BR>
 
 ID: <%= consulta.getIdConsulta() %><BR>
-Fecha : <%= consulta.getFechaDeAtencion() %><BR>
+<!--Fecha : <%= consulta.getFechaDeAtencion() %><BR>-->
 Diagnostico : <%= consulta.getDiagnostico() %><BR>
 
 <BR>
