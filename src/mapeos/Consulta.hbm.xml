@@ -12,7 +12,7 @@
 		<property column="diagnostico" name="diagnostico" type="string"/>
 
 		<many-to-one name="paciente" class="datos.Paciente" column="idPaciente" not-null="true"/>
-		<!--<many-to-one name="categoriaDeConsulta" class="datos.categoriaDeConsulta" column="idCategoriaDeConsulta" not-null="true"/>-->
+		<many-to-one name="categoriaDeConsulta" class="datos.categoriaDeConsulta" column="idCategoriaDeConsulta" not-null="true"/>
 		<!--<many-to-one name="profesional" class="datos.Profesional" column="idProfesional" not-null="true"/>-->
 		
 	</class>
