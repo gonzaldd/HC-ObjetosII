@@ -6,9 +6,9 @@
 <id column="idConsulta" name="idConsulta">
 <generator class="identity"/>
 </id>
-<property column="idPaciente" name="idPaciente" type="int"/>
+<!--<property column="idPaciente" name="idPaciente" type="int"/>-->
 <property column="idProfesional" name="idProfesional" type="int"/>
-<property column="idCategoriaDeConsulta" name="idCategoriaDeConsulta" type="int"/>
+<!--<property column="idCategoriaDeConsulta" name="idCategoriaDeConsulta" type="int"/>-->
 <property column="fechaDeAtencion" name="fechaDeAtencion" type="calendar"/>
 <property column="diagnostico" name="diagnostico" type="string"/>
 

@@ -4,6 +4,9 @@ import java.util.GregorianCalendar;
 public class Consulta {
 
 	private int idConsulta;
+	private Paciente paciente;
+	//private Profesional idProfesional;
+	private categoriaDeConsulta categoriaDeConsulta;
 	private GregorianCalendar fechaDeAtencion;
 	private String diagnostico; //VER EQUIVALENTE A VARCHAR
 	
@@ -16,12 +19,29 @@ public class Consulta {
 		this.diagnostico = diagnostico;
 	}
 
+
 	public int getIdConsulta() {
 		return idConsulta;
 	}
 
 	public void setIdConsulta(int idConsulta) {
 		this.idConsulta = idConsulta;
+	}
+	
+	public Paciente getPaciente() {
+		return paciente;
+	}
+
+	public void setPaciente(Paciente paciente) {
+		this.paciente = paciente;
+	}
+
+	public categoriaDeConsulta getCategoriaDeConsulta() {
+		return categoriaDeConsulta;
+	}
+
+	public void setCategoriaDeConsulta(categoriaDeConsulta categoriaDeConsulta) {
+		this.categoriaDeConsulta = categoriaDeConsulta;
 	}
 
 	public GregorianCalendar getFechaDeAtencion() {
