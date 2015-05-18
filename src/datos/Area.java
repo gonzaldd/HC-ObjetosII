@@ -1,10 +1,12 @@
 package datos;
+import java.util.Set;
 
 public class Area {
 	
 	private int idArea;
 	private String nombreArea;
 	private String descripcionArea;
+	private Set<Especialidad> especialidades;
 	
 	public Area() {}
 	
@@ -37,4 +39,14 @@ public class Area {
 	public void setDescripcionArea(String descripcionArea) {
 		this.descripcionArea = descripcionArea;
 	}
+
+	public Set<Especialidad> getEspecialidades() {
+		return especialidades;
+	}
+
+	public void setEspecialidades(Set<Especialidad> especialidades) {
+		this.especialidades = especialidades;
+	}
+	
+	
 }

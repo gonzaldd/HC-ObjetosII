@@ -9,12 +9,12 @@
 
 		<property column="nombreArea" name="nombreArea" type="string"/>
 		<property column="descripcionArea" name="descripcionArea" type="string"/>
-		<!--<set name="especialidad" table="especialidad" inverse="true" lazy="true" fetch="select">
+		<set name="especialidades" table="especialidad" inverse="true" lazy="true" fetch="select">
 			<key>
 				<column name="idEspecialidad" not-null="true" />
 			</key>
 			<one-to-many class="datos.Especialidad" />
-		</set>-->
+		</set>
 
 	</class>
 </hibernate-mapping>

@@ -3,7 +3,7 @@ package datos;
 public class Especialidad {
 	
 	private int idEspecialidad;
-	private int idArea;//preguntar como se plasta esto en java pq es un fk!!!!
+	private Area area;
 	private String nombreEspecialidad;
 	private String descripcionEspecialidad;
 	
@@ -23,12 +23,12 @@ public class Especialidad {
 		this.idEspecialidad = idEspecialidad;
 	}
 
-	public int getIdArea() {
-		return idArea;
+	public Area getArea() {
+		return area;
 	}
 
-	private void setIdArea(int idArea) {//preguntar este tema de la fk!!!
-		this.idArea = idArea;
+	public void setArea(Area area) {
+		this.area = area;
 	}
 
 	public String getNombreEspecialidad() {

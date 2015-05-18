@@ -10,7 +10,7 @@
 
 		<property column="nombreEspecialidad" name="nombreEspecialidad" type="string"/>
 		<property column="descripcionEspecialidad" name="descripcionEspecialidad" type="string"/>
-		<!--<many-to-one name="area" class="datos.Area" column="idArea" not-null="true"/>-->
+		<many-to-one name="area" class="datos.Area" column="idArea" not-null="true"/>
 		
 	</class>
 </hibernate-mapping>
