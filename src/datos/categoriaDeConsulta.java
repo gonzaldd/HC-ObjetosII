@@ -42,7 +42,14 @@ public class categoriaDeConsulta {
 
 	public void setConsultas(Set<Consulta> consultas) {
 		this.consultas = consultas;
+	}
+
+	@Override
+	public String toString() {
+		
+		return this.nombreCategoriaDeConsulta;
 	}	
+	
 	
 	
 }

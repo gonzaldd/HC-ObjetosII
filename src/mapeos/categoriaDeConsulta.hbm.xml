@@ -7,6 +7,11 @@
 <generator class="identity"/>
 </id>
 <property column="nombreCategoriaDeConsulta" name="nombreCategoriaDeConsulta" type="string"/>
-<many-to-one name="consulta" class="datos.Consulta" column="idConsulta" not-null="true"/>
+<!--<set name="consulta" table="consulta" inverse="true" lazy="true" fetch="select">
+	<key>
+		<column name="idConsulta" not-null="true" />
+	</key>
+	<one-to-many class="datos.Consulta" />
+</set>-->
 </class>
 </hibernate-mapping>

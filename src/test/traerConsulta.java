@@ -3,9 +3,15 @@ package test;
 import negocio.ConsultaABM;
 import datos.Consulta;
 
+
 public class traerConsulta {
+	
+	
 
 	public static void main(String[] args) {
+		
+		
+		
 		ConsultaABM consulta = new ConsultaABM();
 		
 		try{
