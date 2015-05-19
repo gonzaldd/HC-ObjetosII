@@ -6,8 +6,7 @@
 		<id column="idConsulta" name="idConsulta">
 			<generator class="identity"/>
 		</id>
-
-		<!--<property column="idProfesional" name="idProfesional" type="int"/>-->
+		
 		<property column="fechaDeAtencion" name="fechaDeAtencion" type="calendar"/>
 		<property column="diagnostico" name="diagnostico" type="string"/>
 
