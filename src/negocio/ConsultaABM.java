@@ -34,6 +34,15 @@ public class ConsultaABM {
 	
 	return c;
 	}
+	
+	public List<Consulta> traerConsulta1(int id)throws Exception{
+		
+		List<Consulta> c= dao.traerConsulta1(id);
+		
+		if(c==null) throw new Exception("Consulta no existe.");
+	
+	return c;
+	}
 
 	//modificar consulta
 	@SuppressWarnings("null")

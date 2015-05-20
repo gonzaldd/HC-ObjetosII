@@ -5,6 +5,9 @@ import datos.Consulta;
 import datos.Paciente;
 
 
+import java.util.List;
+
+
 public class traerConsulta {
 	
 	
@@ -19,8 +22,10 @@ public class traerConsulta {
 			
 		Consulta c = consulta.traerConsulta(1);
 		System.out.println(c);
-		Paciente p = c.getPaciente();
-		System.out.println(p);
+		
+		List<Consulta> lista = consulta.traerConsulta1(2);
+		for (Consulta o: lista) System.out.println(o);
+		
 		
 		
 		}catch (Exception e){

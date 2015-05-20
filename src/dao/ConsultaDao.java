@@ -92,5 +92,20 @@ public class ConsultaDao {
 	return lista;
 	}
 	
+	public List<Consulta> traerConsulta1(int idPaciente) throws HibernateException {
+		
+		List<Consulta> lista=null;
+
+		try {
+			iniciaOperacion();
+			lista=session.createQuery("from Consulta c where idPaciente = "+ Integer.toString(idPaciente)).list();
+		
+		} finally {
+			session.close();
+		}
+
+	return lista;
+	}
+	
 }
 

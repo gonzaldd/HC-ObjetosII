@@ -10,6 +10,7 @@ public class traerPaciente {
 		
 		PacienteABM pacAbm=new PacienteABM();
 		
+		
 		//traer paciente por id
 		try{
 			
@@ -27,6 +28,7 @@ public class traerPaciente {
 		int dni=22222222;
 		Paciente p = pacAbm.traerPacientePorDni(dni);
 		System.out.println(p);
+		
 			
 		}catch (Exception e){
 			
