@@ -19,4 +19,22 @@
 <url-pattern>/MostrarConsulta</url-pattern>
 </servlet-mapping>
 
+<servlet>
+<servlet-name>ControladorMostrarPacientePorID</servlet-name>
+<servlet-class>controladores.ControladorMostrarPacientePorID</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>ControladorMostrarPacientePorID</servlet-name>
+<url-pattern>/MostrarPacienteID</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>ControladorMostrarPacientePorDNI</servlet-name>
+<servlet-class>controladores.ControladorMostrarPacientePorDNI</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>ControladorMostrarPacientePorDNI</servlet-name>
+<url-pattern>/MostrarPacienteDNI</url-pattern>
+</servlet-mapping>
+
 </web-app>

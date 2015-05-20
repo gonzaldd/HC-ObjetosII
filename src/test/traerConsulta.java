@@ -17,7 +17,7 @@ public class traerConsulta {
 		
 		try{
 			
-		Consulta c = consulta.traerConsulta(2);
+		Consulta c = consulta.traerConsulta(1);
 		System.out.println(c);
 		Paciente p = c.getPaciente();
 		System.out.println(p);
