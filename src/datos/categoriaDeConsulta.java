@@ -47,7 +47,7 @@ public class categoriaDeConsulta {
 	@Override
 	public String toString() {
 		
-		return this.nombreCategoriaDeConsulta;
+		return "Categoria ID: "+this.idCategoriaDeConsulta+ "\nNombre: "+ this.nombreCategoriaDeConsulta;
 	}	
 	
 	
