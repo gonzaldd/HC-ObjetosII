@@ -62,8 +62,27 @@ public class Funciones {
 			fecha+="0"+mes+"/";}
 		else{
 			fecha+=mes+"/";}
+		fecha+=anio;
+				
+		return fecha;
+	}
+	
+	public static String traerFechaCortaDao(GregorianCalendar obj){
+		int dia= obj.get(GregorianCalendar.DATE);
+		int mes= obj.get(GregorianCalendar.MONTH);
+		int anio= obj.get(GregorianCalendar.YEAR);
+		mes=mes+1;
+		String fecha="";		
 		
-			fecha+=anio;
+			fecha+=anio+"-";
+			if(mes<10){
+				fecha+="0"+mes+"-";}
+			else{
+				fecha+=mes+"-";}
+			if(dia<10){
+				fecha+="0"+dia;}
+			else{
+				fecha+=dia+"";}
 				
 		return fecha;
 	}

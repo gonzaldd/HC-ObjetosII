@@ -8,6 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import datos.Consulta;
+import datos.Funciones;
 import datos.Paciente;
 
 public class ConsultaDao {
@@ -80,11 +81,15 @@ public class ConsultaDao {
 	public List<Consulta> traerConsulta(GregorianCalendar fechaDesde, GregorianCalendar fechaHasta) throws HibernateException {
 		
 		List<Consulta> lista=null;
+		String fechaI = Funciones.traerFechaCortaDao(fechaDesde);
+		String fechaH = Funciones.traerFechaCortaDao(fechaHasta);
+		System.out.println(fechaI);
+		System.out.println(fechaH);
 
 		try {
 			iniciaOperacion();
-			lista=session.createQuery("from Consulta c order by c.fechaDeAtencion asc").list();
-		
+			lista=session.createQuery("from Consulta where fechaDeAtencion BETWEEN '"+Funciones.traerFechaCortaDao(fechaDesde)+"' AND '"+Funciones.traerFechaCortaDao(fechaHasta)+"'").list();
+			
 		} finally {
 			session.close();
 		}

@@ -65,7 +65,7 @@ public class ConsultaABM {
 	//Tengo q revisar la implmentacion de este metodo, para q reste las fechas!!
 	public List<Consulta> traerConsulta(GregorianCalendar fechaDesde, GregorianCalendar fechaHasta){
 		
-	return dao.traerConsulta(fechaHasta, fechaHasta);
+	return dao.traerConsulta(fechaDesde, fechaHasta);
 	}
 	
 	//Devuelve la cantidad de consultas por idCategoriaDeConsulta
