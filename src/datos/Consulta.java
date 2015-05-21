@@ -6,7 +6,7 @@ public class Consulta {
 	private int idConsulta;
 	private Paciente paciente;
 	//private Profesional idProfesional;
-	private CategoriaDeConsulta categoriaDeConsulta;
+	private categoriaDeConsulta categoriaDeConsulta;
 	private GregorianCalendar fechaDeAtencion;
 	private String diagnostico; //VER EQUIVALENTE A VARCHAR
 	private Profesional profesional;
@@ -37,11 +37,11 @@ public class Consulta {
 		this.paciente = paciente;
 	}
 
-	public CategoriaDeConsulta getCategoriaDeConsulta() {
+	public categoriaDeConsulta getCategoriaDeConsulta() {
 		return categoriaDeConsulta;
 	}
 
-	public void setCategoriaDeConsulta(CategoriaDeConsulta categoriaDeConsulta) {
+	public void setCategoriaDeConsulta(categoriaDeConsulta categoriaDeConsulta) {
 		this.categoriaDeConsulta = categoriaDeConsulta;
 	}
 

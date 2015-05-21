@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
-  <display-name>HC</display-name>
+  <display-name>HCanterior</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -9,32 +9,36 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
-<servlet>
-<servlet-name>ControladorMostrarConsulta</servlet-name>
-<servlet-class>controladores.ControladorMostrarConsulta</servlet-class>
-</servlet>
-<servlet-mapping>
-<servlet-name>ControladorMostrarConsulta</servlet-name>
-<url-pattern>/MostrarConsulta</url-pattern>
-</servlet-mapping>
-
-<servlet>
-<servlet-name>ControladorMostrarPacientePorID</servlet-name>
-<servlet-class>controladores.ControladorMostrarPacientePorID</servlet-class>
-</servlet>
-<servlet-mapping>
-<servlet-name>ControladorMostrarPacientePorID</servlet-name>
-<url-pattern>/MostrarPacienteID</url-pattern>
-</servlet-mapping>
-
-<servlet>
-<servlet-name>ControladorMostrarPacientePorDNI</servlet-name>
-<servlet-class>controladores.ControladorMostrarPacientePorDNI</servlet-class>
-</servlet>
-<servlet-mapping>
-<servlet-name>ControladorMostrarPacientePorDNI</servlet-name>
-<url-pattern>/MostrarPacienteDNI</url-pattern>
-</servlet-mapping>
-
+  <servlet>
+    <servlet-name>ControladorMostrarConsulta</servlet-name>
+    <servlet-class>controladores.ControladorMostrarConsulta</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControladorMostrarConsulta</servlet-name>
+    <url-pattern>/MostrarConsulta</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ControladorMostrarPacientePorID</servlet-name>
+    <servlet-class>controladores.ControladorMostrarPacientePorID</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControladorMostrarPacientePorID</servlet-name>
+    <url-pattern>/MostrarPacienteID</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ControladorMostrarPacientePorDNI</servlet-name>
+    <servlet-class>controladores.ControladorMostrarPacientePorDNI</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControladorMostrarPacientePorDNI</servlet-name>
+    <url-pattern>/MostrarPacienteDNI</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ControladorMostrarHistoriaClinica</servlet-name>
+    <servlet-class>controladores.ControladorMostrarHistoriaClinica</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControladorMostrarHistoriaClinica</servlet-name>
+    <url-pattern>/MostrarHistoriaClinica</url-pattern>
+  </servlet-mapping>
 </web-app>
