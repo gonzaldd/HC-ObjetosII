@@ -4,7 +4,6 @@ import java.util.List;
 
 import negocio.ConsultaABM;
 import negocio.CategoriaDeConsultaABM;
-import datos.Consulta;
 import datos.categoriaDeConsulta;
 
 public class testTraerDatosEstadisticos {

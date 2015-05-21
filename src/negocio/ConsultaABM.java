@@ -68,11 +68,11 @@ public class ConsultaABM {
 	return dao.traerConsulta(fechaHasta, fechaHasta);
 	}
 	
-	public int traerCantConsulta(int idCategoria) throws HibernateException {
+	public long traerCantConsulta(int idCategoria) throws HibernateException {
 		
-		int cantidad = dao.traerCantidadConsulta(idCategoria);	
+		//long cantidad = dao.traerCantidadConsulta(idCategoria);	
 		
-		return cantidad;
+		return dao.traerCantidadConsulta(idCategoria);
 	}
 }
 

@@ -107,19 +107,20 @@ public class ConsultaDao {
 	return lista;
 	}
 	
-	public int traerCantidadConsulta(int idCat) throws HibernateException {
+	public long traerCantidadConsulta(int idCat) throws HibernateException {
 		List<Consulta> objeto = null;
-		int cantidad = 0;
+		long cantidad = 0;
 
 		try {
 			iniciaOperacion();
-			objeto = session.createQuery("from Consulta c where idCategoriaDeConsulta = "+ Integer.toString(idCat)).list();
+			//objeto = session.createQuery("from Consulta c where idCategoriaDeConsulta = "+ Integer.toString(idCat)).list();
+			cantidad = (long)session.createQuery("select count(*) from Consulta where idCategoriaDeConsulta =" + Integer.toString(idCat)).uniqueResult();
 
 		} finally {
 			session.close();
 		}
 		
-		cantidad = objeto.size();
+		//cantidad = objeto.size();
 	
 	return cantidad;
 	}
