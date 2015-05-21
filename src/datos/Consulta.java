@@ -63,7 +63,7 @@ public class Consulta {
 	@Override
 	public String toString() {
 		
-		return "ID: "+this.idConsulta+"\nDiagnostico: "+this.diagnostico;
+		return "ID: "+this.idConsulta+"\nFecha: "+ Funciones.traerFechaCorta(getFechaDeAtencion())+"\nDiagnostico: "+this.diagnostico;
 	}
 	
 	
