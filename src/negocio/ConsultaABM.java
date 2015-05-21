@@ -3,6 +3,8 @@ package negocio;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+import org.hibernate.HibernateException;
+
 import dao.ConsultaDao;
 import datos.Consulta;
 import datos.Paciente;
@@ -64,6 +66,13 @@ public class ConsultaABM {
 	public List<Consulta> traerConsulta(GregorianCalendar fechaDesde, GregorianCalendar fechaHasta){
 		
 	return dao.traerConsulta(fechaHasta, fechaHasta);
+	}
+	
+	public int traerCantConsulta(int idCategoria) throws HibernateException {
+		
+		int cantidad = dao.traerCantidadConsulta(idCategoria);	
+		
+		return cantidad;
 	}
 }
 

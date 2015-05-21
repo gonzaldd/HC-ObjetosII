@@ -107,5 +107,22 @@ public class ConsultaDao {
 	return lista;
 	}
 	
+	public int traerCantidadConsulta(int idCat) throws HibernateException {
+		List<Consulta> objeto = null;
+		int cantidad = 0;
+
+		try {
+			iniciaOperacion();
+			objeto = session.createQuery("from Consulta c where idCategoriaDeConsulta = "+ Integer.toString(idCat)).list();
+
+		} finally {
+			session.close();
+		}
+		
+		cantidad = objeto.size();
+	
+	return cantidad;
+	}
+	
 }
 
