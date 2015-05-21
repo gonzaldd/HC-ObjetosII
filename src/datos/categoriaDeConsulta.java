@@ -2,15 +2,15 @@ package datos;
 
 import java.util.Set;
 
-public class categoriaDeConsulta {
+public class CategoriaDeConsulta {
 
 	private int idCategoriaDeConsulta;
 	private String nombreCategoriaDeConsulta;
 	private Set<Consulta> consultas;
 
-	public categoriaDeConsulta(){}
+	public CategoriaDeConsulta(){}
 
-	public categoriaDeConsulta(String nombreCategoriaDeConsulta) {
+	public CategoriaDeConsulta(String nombreCategoriaDeConsulta) {
 		super();
 		this.nombreCategoriaDeConsulta = nombreCategoriaDeConsulta;
 	}
@@ -47,7 +47,7 @@ public class categoriaDeConsulta {
 	@Override
 	public String toString() {
 		
-		return "Categoria ID: "+this.idCategoriaDeConsulta+ "\nNombre: "+ this.nombreCategoriaDeConsulta;
+		return this.nombreCategoriaDeConsulta;
 	}	
 	
 	

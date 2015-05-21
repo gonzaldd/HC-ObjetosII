@@ -9,6 +9,7 @@ public class ContactoProfesional {
 	private String direccionProfesional;
 	private String mailProfesional;
 	private GregorianCalendar fechaDeNacimiento;
+	private Profesional profesional;
 	
 	public ContactoProfesional() {}
 	
@@ -59,6 +60,16 @@ public class ContactoProfesional {
 	public void setFechaDeNacimiento(GregorianCalendar fechaDeNacimiento) {
 		this.fechaDeNacimiento = fechaDeNacimiento;
 	}
+
+	public Profesional getProfesional() {
+		return profesional;
+	}
+
+	public void setProfesional(Profesional profesional) {
+		this.profesional = profesional;
+	}
+	
+	
 	
 	
 }

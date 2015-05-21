@@ -6,9 +6,10 @@ public class Consulta {
 	private int idConsulta;
 	private Paciente paciente;
 	//private Profesional idProfesional;
-	private categoriaDeConsulta categoriaDeConsulta;
+	private CategoriaDeConsulta categoriaDeConsulta;
 	private GregorianCalendar fechaDeAtencion;
 	private String diagnostico; //VER EQUIVALENTE A VARCHAR
+	private Profesional profesional;
 	
 	
 	public Consulta(){}
@@ -36,11 +37,11 @@ public class Consulta {
 		this.paciente = paciente;
 	}
 
-	public categoriaDeConsulta getCategoriaDeConsulta() {
+	public CategoriaDeConsulta getCategoriaDeConsulta() {
 		return categoriaDeConsulta;
 	}
 
-	public void setCategoriaDeConsulta(categoriaDeConsulta categoriaDeConsulta) {
+	public void setCategoriaDeConsulta(CategoriaDeConsulta categoriaDeConsulta) {
 		this.categoriaDeConsulta = categoriaDeConsulta;
 	}
 
@@ -60,10 +61,20 @@ public class Consulta {
 		this.diagnostico = diagnostico;
 	}
 
+	
+	
+	public Profesional getProfesional() {
+		return profesional;
+	}
+
+	public void setProfesional(Profesional profesional) {
+		this.profesional = profesional;
+	}
+
 	@Override
 	public String toString() {
 		
-		return "ID: "+this.idConsulta+"\nFecha: "+ Funciones.traerFechaCorta(getFechaDeAtencion())+"\nDiagnostico: "+this.diagnostico;
+		return "ID: "+this.idConsulta+"\nDiagnostico: "+this.diagnostico;
 	}
 	
 	

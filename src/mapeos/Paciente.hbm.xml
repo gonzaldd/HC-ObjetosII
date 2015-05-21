@@ -17,6 +17,8 @@
 		</key>
 		<one-to-many class="datos.Consulta" />
 	</set>
+	
+	
 	<one-to-one name="contacto" class="datos.ContactoPaciente"/>
 
 </class>

@@ -15,7 +15,7 @@
 
 			<one-to-one name="profesional" class="datos.Profesional"/>
 			
-			<!-- <one-to-one name="login" class="datos.Login"/>     -->
+			<one-to-one name="login" class="datos.Login"/>   
 	
 
 

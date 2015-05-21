@@ -1,9 +1,11 @@
 package datos;
+import java.util.Set;
 
 public class Especialidad {
 	
 	private int idEspecialidad;
 	private Area area;
+	private Set<Profesional> profesional;
 	private String nombreEspecialidad;
 	private String descripcionEspecialidad;
 	
@@ -31,6 +33,14 @@ public class Especialidad {
 		this.area = area;
 	}
 
+	public Set<Profesional> getProfesional() {
+		return profesional;
+	}
+
+	public void setProfesional(Set<Profesional> profesional) {
+		this.profesional = profesional;
+	}
+
 	public String getNombreEspecialidad() {
 		return nombreEspecialidad;
 	}
@@ -46,7 +56,8 @@ public class Especialidad {
 	public void setDescripcionEspecialidad(String descripcionEspecialidad) {
 		this.descripcionEspecialidad = descripcionEspecialidad;
 	}
-	
+
+
 	
 	
 }

@@ -1,5 +1,7 @@
 package datos;
 
+import java.util.Set;
+
 
 
 public class Profesional {
@@ -9,6 +11,8 @@ public class Profesional {
 	  private int matriculaProfesional;
 	  private boolean activoProfesional;
 	  private Usuario usuario;
+	  private ContactoProfesional contactoProfesional;
+		private Set<Consulta> consultas;
 	  
 	  public Profesional() {}
 	  
@@ -72,6 +76,31 @@ public class Profesional {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+	
+	
+	
+
+
+	public ContactoProfesional getContactoProfesional() {
+		return contactoProfesional;
+	}
+
+
+	public void setContactoProfesional(ContactoProfesional contactoProfesional) {
+		this.contactoProfesional = contactoProfesional;
+	}
+
+	
+	
+
+	public Set<Consulta> getConsultas() {
+		return consultas;
+	}
+
+
+	public void setConsultas(Set<Consulta> consultas) {
+		this.consultas = consultas;
 	}
 
 

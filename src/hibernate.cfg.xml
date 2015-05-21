@@ -13,9 +13,15 @@
 <!--Mapeo Entidades -->
 		<mapping resource="mapeos/Consulta.hbm.xml"/>
 		<mapping resource="mapeos/Paciente.hbm.xml"/>
-		<mapping resource="mapeos/categoriaDeConsulta.hbm.xml"/>
-		<mapping resource="mapeos/Area.hbm.xml"/>
+		<mapping resource="mapeos/CategoriaDeConsulta.hbm.xml"/>
+		<mapping resource="mapeos/Area.hbm.xml"/> 
 		<mapping resource="mapeos/Especialidad.hbm.xml"/>
 		<mapping resource="mapeos/ContactoPaciente.hbm.xml"/>
+		<mapping resource="mapeos/ContactoProfesional.hbm.xml"/>
+		<mapping resource="mapeos/Profesional.hbm.xml"/> 
+		<mapping resource="mapeos/Usuario.hbm.xml"/>  
+		<mapping resource="mapeos/Login.hbm.xml"/>   
+
+
 	</session-factory>
 </hibernate-configuration>

@@ -10,7 +10,18 @@
 
 		<property column="nombreEspecialidad" name="nombreEspecialidad" type="string"/>
 		<property column="descripcionEspecialidad" name="descripcionEspecialidad" type="string"/>
+		
+		
 		<many-to-one name="area" class="datos.Area" column="idArea" not-null="true"/>
+		
+		
+			<set name="profesional" table="profesional" inverse="true" lazy="true" fetch="select">
+		<key>
+			<column name="idProfesional" not-null="true" />
+		</key>
+		<one-to-many class="datos.Profesional" />
+	</set>
+		
 		
 	</class>
 </hibernate-mapping>

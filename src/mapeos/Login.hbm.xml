@@ -8,7 +8,7 @@
 <id column="idLogin" name="idLogin">
 		<generator class="identity"/>
 	</id>
-	<property column="usuarioLogin" name="usuarioNombre" type="int"/>
+	<property column="usuarioLogin" name="usuarioLogin" type="int"/>
 	<property column="claveLogin" name="claveLogin" type="string"/>
 	<property column="ultimoIngresoLogin" name="ultimoIngresoLogin" type="calendar"/>
 	<property column="ultimoCambioClaveLogin" name="ultimoCambioClaveLogin" type="calendar"/>

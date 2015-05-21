@@ -72,9 +72,8 @@ public class Paciente {
 
 	@Override
 	public String toString() {
-		
-		return "ID: "+this.idPaciente+"\nApellido: "+this.apellidoPaciente+ "\nNombre: "+ this.nombrePaciente+ "\nDNI:"
-				+ this.dniPaciente+ "\nActivo: "+ this.activoPaciente;
+		// TODO Auto-generated method stub
+		return "Nombre: "+this.nombrePaciente;
 	}
 
 	
