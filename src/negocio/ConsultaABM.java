@@ -68,9 +68,9 @@ public class ConsultaABM {
 	return dao.traerConsulta(fechaHasta, fechaHasta);
 	}
 	
-	public long traerCantConsulta(int idCategoria) throws HibernateException {
-		
-		//long cantidad = dao.traerCantidadConsulta(idCategoria);	
+	//Devuelve la cantidad de consultas por idCategoriaDeConsulta
+	public int traerCantConsulta(int idCategoria) throws HibernateException {
+			
 		
 		return dao.traerCantidadConsulta(idCategoria);
 	}
