@@ -5,7 +5,7 @@ pageEncoding="ISO-8859-1"%>
 <TABLE border="0" width="100%">
 <TR>
 <TD align="left">
-<IMG src="img/yingyang.jpg">
+<IMG src="static/img/yingyang.jpg">
 </TD>
 <TD align="center">
 <H1>Hospital Nuevo</H1>
