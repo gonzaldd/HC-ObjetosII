@@ -30,10 +30,16 @@ public class ControladorMostrarHistoriaClinica extends HttpServlet {
 
 	
 	try {
-		int idPaciente = Integer.parseInt(request.getParameter("idPaciente"));
+		
+		PacienteABM pacienteAbm = new PacienteABM();
+		int dniPaciente = Integer.parseInt(request.getParameter("dniPaciente"));
+		Paciente paciente = pacienteAbm.traerPacientePorDni(dniPaciente);
 		ConsultaABM consultaabm=new ConsultaABM();
-		List<Consulta> consultas=consultaabm.traerConsulta1(idPaciente);
+		List<Consulta> consultas=consultaabm.traerConsulta1(paciente.getIdPaciente());
+		
 		request.setAttribute("consultas", consultas);
+		request.setAttribute("paciente", paciente);
+		
 		request.getRequestDispatcher("/vistaHistoriaClinica.jsp").forward(request ,response);
 	
 	} catch (Exception e) {
