@@ -43,7 +43,7 @@ public class ControladorMostrarHistoriaClinica extends HttpServlet {
 		request.getRequestDispatcher("/vistaHistoriaClinica.jsp").forward(request ,response);
 	
 	} catch (Exception e) {
-		response.sendError(500, "el Id Ingresado no existe en la base de datos.");
+		response.sendError(500, "el DNI Ingresado no existe en la base de datos.");
 	}
 
 	}

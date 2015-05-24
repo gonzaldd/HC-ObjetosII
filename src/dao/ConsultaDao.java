@@ -6,10 +6,10 @@ import java.util.List;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-
 import datos.Consulta;
 import datos.Funciones;
 import datos.Paciente;
+
 
 public class ConsultaDao {
 	
@@ -125,8 +125,28 @@ public class ConsultaDao {
 			session.close();
 		}
 		
-	
 	return cantidad;
+	}
+	
+	//agregar consulta a un paciente
+	public int agregarConsulta(Consulta objeto){
+		
+		int id=0;
+		
+		try{
+			iniciaOperacion();
+			id=Integer.parseInt(session.save(objeto).toString());
+			tx.commit();
+		
+		} catch(HibernateException he){
+			manejaExcepcion(he);
+			throw he;
+		
+		}finally{
+			session.close();
+		}
+	
+		return id;	
 	}
 	
 }

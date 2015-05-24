@@ -2,12 +2,11 @@ package negocio;
 
 import java.util.GregorianCalendar;
 import java.util.List;
-
 import org.hibernate.HibernateException;
-
 import dao.ConsultaDao;
 import datos.Consulta;
 import datos.Paciente;
+
 
 public class ConsultaABM {
 	
@@ -74,5 +73,22 @@ public class ConsultaABM {
 		
 		return dao.traerCantidadConsulta(idCategoria);
 	}
+	
+	//agregar consulta a un paciente
+	public int agregarConsulta(/* int idPaciente, int idCategoriaDeConsulta,int idProfesional,*/ GregorianCalendar fechaDeAtencion, String diagnostico) throws Exception{
+		
+
+		Consulta c=new Consulta(fechaDeAtencion, diagnostico);
+		
+		int idConsulta= c.getIdConsulta(); 
+		
+		if(dao.traerConsulta(idConsulta)!= null){
+			
+			throw new Exception("Consulta ya existe");
+		}
+		
+	return dao.agregarConsulta(c);
+	}
+	
 }
 
