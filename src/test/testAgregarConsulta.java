@@ -16,7 +16,7 @@ public class testAgregarConsulta {
 
 		try {
 	
-			abm.agregarConsulta( fechaHoy, diagnostico);
+			abm.agregarConsulta(1,1,1,fechaHoy, diagnostico);
 		
 		} catch (Exception e) {
 			
