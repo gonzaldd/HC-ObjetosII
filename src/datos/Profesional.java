@@ -106,11 +106,9 @@ public class Profesional {
 
 	@Override
 	public String toString() {
-		return "Profesional [idProfesional=" + idProfesional
-				+ ", especialidad=" + especialidad + ", matriculaProfesional="
-				+ matriculaProfesional + ", activoProfesional="
-				+ activoProfesional + "]";
-	}
+			
+			return "ID: "+ this.idProfesional+"\nMatricula: "+this.matriculaProfesional+"\nActivo: "+this.activoProfesional;
+		}
 
 
 
