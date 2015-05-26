@@ -41,4 +41,13 @@
     <servlet-name>ControladorMostrarHistoriaClinica</servlet-name>
     <url-pattern>/MostrarHistoriaClinica</url-pattern>
   </servlet-mapping>
+  
+ <servlet>
+    <servlet-name>ControladorEstadistica</servlet-name>
+    <servlet-class>controladores.ControladorEstadisticas</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControladorEstadistica</servlet-name>
+    <url-pattern>/mostrarEstadisticas</url-pattern>
+  </servlet-mapping>
 </web-app>

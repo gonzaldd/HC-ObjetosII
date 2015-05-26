@@ -114,7 +114,7 @@ public class ConsultaDao {
 	
 	//Devuelve la cantidad de consultas con el idCategoriaDeConsulta dado
 	public int traerCantidadConsulta(int idCat) throws HibernateException {
-		List<Consulta> objeto = null;
+		
 		int cantidad = 0;
 
 		try {
