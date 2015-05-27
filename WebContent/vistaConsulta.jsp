@@ -13,7 +13,8 @@ pageEncoding="ISO-8859-1"%>
 <BODY>
 <%@ include file="/cabecera.jsp" %>
 
-<% Consulta consulta=(Consulta)request.getAttribute("consulta"); %>
+<% Consulta consulta=new Consulta(); %>
+<% int idConsulta=(int)request.getAttribute("idConsulta"); %>
 <BR>
 
 ID: <%= consulta.getIdConsulta() %><BR>

@@ -149,5 +149,21 @@ public class ConsultaDao {
 		return id;	
 	}
 	
+	
+	public List<Consulta> traerConsulta() throws HibernateException {
+		
+		List<Consulta> lista=null;
+
+		try {
+			iniciaOperacion();
+			lista=session.createQuery("from Cliente c order by c.idConsulta").list();
+		
+		} finally {
+			session.close();
+		}
+
+	return lista;
+	}
+	
 }
 

@@ -104,5 +104,9 @@ public class ConsultaABM {
 	return dao.agregarConsulta(c);
 	}
 	
+	public List<Consulta> traerConsulta(){
+		
+		return dao.traerConsulta();}
+	
 }
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="datos.ContactoProfesional" table="contactoprofesional">
+		<id name="idProfesional" column="idProfesional">         
+    		<generator class="identity"/>
+		</id>
+	
+	<property column="telefonoProfesional" name="telefonoProfesional" type="string"/>
+	<property column="direccionProfesional" name="direccionProfesional" type="string"/>
+	<property column="mailProfesional" name="mailProfesional" type="string"/>
+	<property column="fechaDeNacimiento" name="fechaDeNacimiento" type="calendar"/>
+	
+	
+		<one-to-one name="profesional" class="datos.Profesional"/>
+	
+	</class>
+</hibernate-mapping>

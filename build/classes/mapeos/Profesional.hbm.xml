@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="datos.Profesional" table="profesional">
+
+<id column="idProfesional" name="idProfesional">
+		<generator class="identity"/>
+	</id>
+	
+	<property column="matriculaProfesional" name="matriculaProfesional" type="int"/>
+	<property column="activoProfesional" name="activoProfesional" type="boolean"/>
+	
+	
+	<many-to-one name="especialidad" class="datos.Especialidad" column="idEspecialidad" not-null="true"/>
+	<one-to-one name="contactoProfesional" class="datos.ContactoProfesional"/>
+	<one-to-one name="usuario" class="datos.Usuario"/>  
+	
+			<set name="consultas" table="consulta" inverse="true" lazy="true" fetch="select">
+			<key>
+				<column name="idConsulta" not-null="true" />
+			</key>
+			<one-to-many class="datos.Consulta" />
+		</set>
+	
+</class>
+</hibernate-mapping>

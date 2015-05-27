@@ -50,4 +50,22 @@
     <servlet-name>ControladorEstadistica</servlet-name>
     <url-pattern>/mostrarEstadisticas</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ControladorAgregarConsulta</servlet-name>
+    <servlet-class>controladores.ControladorAgregarConsulta</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControladorAgregarConsulta</servlet-name>
+    <url-pattern>/AgregarConsulta</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ControladorMostrarConsultasEntreFechas</servlet-name>
+    <servlet-class>controladores.ControladorMostrarConsultasEntreFechas</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControladorMostrarConsultasEntreFechas</servlet-name>
+    <url-pattern>/VerConsultas</url-pattern>
+  </servlet-mapping>
 </web-app>
