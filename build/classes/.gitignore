@@ -1,5 +1,7 @@
 /controladores/
 /dao/
 /datos/
-/test/
+/hibernate.cfg.xml
+/mapeos/
 /negocio/
+/test/

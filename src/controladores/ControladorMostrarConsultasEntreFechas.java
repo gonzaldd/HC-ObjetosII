@@ -16,10 +16,6 @@ import datos.Funciones;
 import datos.Paciente;
 
 public class ControladorMostrarConsultasEntreFechas extends HttpServlet {
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		procesarPeticion(request, response);
-	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

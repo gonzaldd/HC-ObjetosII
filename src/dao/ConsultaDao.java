@@ -83,8 +83,6 @@ public class ConsultaDao {
 		List<Consulta> lista=null;
 		String fechaI = Funciones.traerFechaCortaDao(fechaDesde);
 		String fechaH = Funciones.traerFechaCortaDao(fechaHasta);
-		System.out.println(fechaI);
-		System.out.println(fechaH);
 
 		try {
 			iniciaOperacion();

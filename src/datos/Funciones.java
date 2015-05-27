@@ -136,12 +136,12 @@ public class Funciones {
 				
 		}
 		else{
-			if(m==4 || m==6 || m==9 || m==11){
+			if(m==4 || m==5 || m==8 || m==10){
 				if(d<0 || d>30){
 					correcto=false;
 			}
 				else{
-					if(d<0 || d>31){
+					if(d<1 || d>31){
 						correcto=false;
 					}
 								
