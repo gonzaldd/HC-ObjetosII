@@ -18,6 +18,5 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-5.1.18-bin.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/Esteban/Documents/GitHub/HC-ObjetosII/WebContent/WEB-INF/lib/hibernate-tools-4.3.1.CR1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
