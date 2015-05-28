@@ -71,7 +71,14 @@ public class ConsultaABM {
 	public List<Consulta> traerConsulta(GregorianCalendar fechaDesde, GregorianCalendar fechaHasta){
 		
 	return dao.traerConsulta(fechaDesde, fechaHasta);
+	
 	}
+	
+	public List<Consulta> traerConsulta(Paciente paciente,GregorianCalendar fechaDesde, GregorianCalendar fechaHasta){
+		
+		return dao.traerConsulta(paciente,fechaDesde, fechaHasta);
+		
+		}
 	
 	//Devuelve la cantidad de consultas por idCategoriaDeConsulta
 	public int traerCantConsulta(int idCategoria) throws HibernateException {
@@ -107,6 +114,18 @@ public class ConsultaABM {
 	public List<Consulta> traerConsulta(){
 		
 		return dao.traerConsulta();}
+	
+	public int[] devolverCantidad(List<categoriaDeConsulta> lista){
+		
+		int[] array = new int[lista.size()];
+		int i = 0;
+		for(categoriaDeConsulta categoria:lista){
+			array[i] = dao.traerCantidadConsulta(categoria.getIdCategoriaDeConsulta());
+			i++;
+		}
+		
+	return array;
+	}
 	
 }
 

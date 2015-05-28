@@ -39,7 +39,7 @@ public class ControladorMostrarConsultasEntreFechas extends HttpServlet {
 		ConsultaABM consultaabm=new ConsultaABM();
 		
 		
-		List<Consulta> consultas=consultaabm.traerConsulta(fechaDesde, fechaHasta);
+		List<Consulta> consultas=consultaabm.traerConsulta(paciente,fechaDesde, fechaHasta);
 		
 		request.setAttribute("consultas", consultas);
 		request.setAttribute("paciente", paciente);

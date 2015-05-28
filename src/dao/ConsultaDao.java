@@ -95,6 +95,24 @@ public class ConsultaDao {
 	return lista;
 	}
 	
+public List<Consulta> traerConsulta(Paciente paciente,GregorianCalendar fechaDesde, GregorianCalendar fechaHasta) throws HibernateException {
+		
+		List<Consulta> lista=null;
+		String fechaI = Funciones.traerFechaCortaDao(fechaDesde);
+		String fechaH = Funciones.traerFechaCortaDao(fechaHasta);
+		String idPaciente = Integer.toString(paciente.getIdPaciente());
+
+		try {
+			iniciaOperacion();
+			lista=session.createQuery("from Consulta where idPaciente = "+paciente.getIdPaciente()+" and fechaDeAtencion BETWEEN '"+Funciones.traerFechaCortaDao(fechaDesde)+"' AND '"+Funciones.traerFechaCortaDao(fechaHasta)+"'").list();
+			
+		} finally {
+			session.close();
+		}
+
+	return lista;
+	}
+	
 	public List<Consulta> traerConsulta1(int idPaciente) throws HibernateException {
 		
 		List<Consulta> lista=null;
