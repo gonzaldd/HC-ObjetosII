@@ -68,4 +68,13 @@
     <servlet-name>ControladorMostrarConsultasEntreFechas</servlet-name>
     <url-pattern>/VerConsultas</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ControladorLogin</servlet-name>
+    <servlet-class>controladores.ControladorLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControladorLogin</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
 </web-app>

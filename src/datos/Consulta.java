@@ -5,7 +5,6 @@ public class Consulta {
 
 	private int idConsulta;
 	private Paciente paciente;
-	//private Profesional idProfesional;
 	private categoriaDeConsulta categoriaDeConsulta;
 	private GregorianCalendar fechaDeAtencion;
 	private String diagnostico; //VER EQUIVALENTE A VARCHAR

@@ -3,26 +3,26 @@ package negocio;
 
 import dao.LoginDao;
 import datos.Login;
+import datos.Paciente;
 
 public class LoginABM {
 
 	LoginDao dao = new LoginDao();
 	
 	
-	public Login loginValido (int usuarioLogin/*, String claveLogin*/) throws Exception{
+	public Login usuarioValido (int usuario) throws Exception{
 		
-
+		Login logueo = dao.usuarioValido(usuario);
+		return logueo;
 		
-		Login log = dao.loginValido(usuarioLogin);
-		
-		if(log==null) throw new Exception ("Usuario o contraseña inválida");
-		
-		return log;
-		
-		
-		
-		
-		
+	}
+	
+	public boolean passValida(String pass,Login usuario){
+		boolean valido = false;
+		if(usuario.getClaveLogin().equals(pass)){
+				valido = true;
+				}	
+		return valido;
 	}
 	
 	

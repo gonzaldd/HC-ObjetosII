@@ -3,9 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 <class name="datos.Login" table="login">
-
-	
-<id column="idLogin" name="idLogin">
+	<id column="idLogin" name="idLogin">
 		<generator class="identity"/>
 	</id>
 	<property column="usuarioLogin" name="usuarioLogin" type="int"/>
@@ -16,7 +14,7 @@
 	<property column="activoLogin" name="activoLogin" type="boolean"/>
 	
 
-			<one-to-one name="usuario" class="datos.Usuario"/>  
+	<!--<one-to-one name="usuario" class="datos.Usuario"/>-->
 
 </class>
 </hibernate-mapping>

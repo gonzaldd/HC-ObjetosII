@@ -14,7 +14,7 @@ public class traerPaciente {
 		//traer paciente por id
 		try{
 			
-		Paciente p = pacAbm.traerPacientePorId(1);
+		Paciente p = pacAbm.traerPacientePorId(100000);
 		System.out.println(p);
 		
 		}catch (Exception e){

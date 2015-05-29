@@ -15,9 +15,8 @@ public class Login {
 	  
 	  public Login () {}
 
-	public Login(int usuarioLogin, String claveLogin,
-			GregorianCalendar ultimoIngresoLogin,
-			GregorianCalendar ultimoCambioClaveLogin, int tipoUsuario,
+	public Login(int usuarioLogin, String claveLogin,GregorianCalendar ultimoIngresoLogin,GregorianCalendar ultimoCambioClaveLogin,
+			int tipoUsuario,
 			boolean activoLogin) {
 		super();
 		this.usuarioLogin = usuarioLogin;
@@ -32,7 +31,7 @@ public class Login {
 		return idLogin;
 	}
 
-	public void setIdLogin(int idLogin) {
+	private void setIdLogin(int idLogin) {
 		this.idLogin = idLogin;
 	}
 

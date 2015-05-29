@@ -26,12 +26,7 @@ public class ControladorEstadisticas extends HttpServlet {
 			CategoriaDeConsultaABM categoriaabm=new CategoriaDeConsultaABM();
 			ConsultaABM consulta = new ConsultaABM();
 			List<categoriaDeConsulta> lista = categoriaabm.traerCategoria();
-			int[] array = consulta.devolverCantidad(lista);/*new int[lista.size()];
-			int i = 0;
-			for(categoriaDeConsulta categoria:lista){
-				array[i] = consulta.traerCantConsulta(categoria.getIdCategoriaDeConsulta());
-				i++;
-			}*/
+			int[] array = consulta.devolverCantidad(lista);
 			
 			request.setAttribute("valor", array);
 			request.setAttribute("categoria", lista);

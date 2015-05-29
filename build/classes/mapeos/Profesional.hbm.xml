@@ -15,7 +15,7 @@
 	
 	<many-to-one name="especialidad" class="datos.Especialidad" column="idEspecialidad" not-null="true"/>
 	<one-to-one name="contactoProfesional" class="datos.ContactoProfesional"/>
-	<one-to-one name="usuario" class="datos.Usuario"/>  
+	<one-to-one name="usuario" class="datos.Usuario"/> 
 	
 			<set name="consultas" table="consulta" inverse="true" lazy="true" fetch="select">
 			<key>

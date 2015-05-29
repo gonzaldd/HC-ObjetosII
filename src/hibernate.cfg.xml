@@ -18,8 +18,8 @@
 		<mapping resource="mapeos/Especialidad.hbm.xml"/>
 		<mapping resource="mapeos/ContactoPaciente.hbm.xml"/>
 		<mapping resource="mapeos/ContactoProfesional.hbm.xml"/>
-		<mapping resource="mapeos/Profesional.hbm.xml"/> 
-		<mapping resource="mapeos/Usuario.hbm.xml"/>  
+		<mapping resource="mapeos/Profesional.hbm.xml"/>
+		<mapping resource="mapeos/Usuario.hbm.xml"/> 
 		<mapping resource="mapeos/Login.hbm.xml"/>   
 
 

@@ -5,10 +5,10 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import datos.Login;
-
+import datos.Paciente;
 
 public class LoginDao {
-
+	
 	private static Session session;
 	private Transaction tx;
 	
@@ -24,32 +24,26 @@ public class LoginDao {
 		throw new HibernateException("ERROR en la capa de acceso a datos", he);
 	}
 	
-	
-	//traer login por usuarioy contraseña
-	
-	public Login loginValido (int usuarioLogin/*, String claveLogin*/) throws HibernateException {
+	public Login usuarioValido(int usuario) throws HibernateException {
 		
-		Login l = null;
+		Login objeto = null;
 		
 		try {
 			iniciaOperacion();
-			l = (Login)session.createQuery("from Login l where l.usuarioLogin ="+
-			Integer.toString(usuarioLogin)); /*+
-			"and l.claveLogin = " +
-			(claveLogin));*/
-			
-			
-			
-		} finally {
+			objeto = (Login)session.createQuery("from Login where usuarioLogin = "+Integer.toString(usuario)).uniqueResult();
+
+		}catch(HibernateException he){
+			manejaExcepcion(he);
+			throw he;
+		
+		}finally {
 			session.close();
 		}
-		return l;
 		
-		
-		
-		
+		return objeto;
+	
 	}
 	
 	
-	
+
 }
