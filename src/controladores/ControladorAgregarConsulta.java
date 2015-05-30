@@ -11,12 +11,16 @@ import javax.servlet.http.HttpServletResponse;
 
 import negocio.CategoriaDeConsultaABM;
 import negocio.ConsultaABM;
+import negocio.LoginABM;
 import negocio.PacienteABM;
 import negocio.ProfesionalABM;
+import negocio.UsuarioABM;
 import datos.Consulta;
 import datos.Funciones;
+import datos.Login;
 import datos.Paciente;
 import datos.Profesional;
+import datos.Usuario;
 import datos.categoriaDeConsulta;
 
 public class ControladorAgregarConsulta extends HttpServlet {
@@ -44,14 +48,14 @@ public class ControladorAgregarConsulta extends HttpServlet {
 		int dniPaciente = Integer.parseInt(request.getParameter("dniPaciente"));
 		Paciente paciente = pacienteAbm.traerPacientePorDni(dniPaciente);
 		
-		/*ProfesionalABM profesionalAbm= new ProfesionalABM();
+		ProfesionalABM profesionalAbm= new ProfesionalABM();
 		int idProfesional = Integer.parseInt(request.getParameter("idProfesional"));
 		Profesional profesional = profesionalAbm.traerProfesional(idProfesional);
 		
 		CategoriaDeConsultaABM categoriaAbm= new CategoriaDeConsultaABM();
 		int idCategoriaDeConsulta = Integer.parseInt(request.getParameter("idCategoriaDeConsulta"));
 		categoriaDeConsulta categoria = categoriaAbm.traerCategoria(idCategoriaDeConsulta);
-		*/
+		
 		/*
 		int idPaciente = Integer.parseInt(request.getParameter("idPaciente"));
 		int idCategoriaDeConsulta= Integer.parseInt(request.getParameter("idCategoriaDeConsulta"));
