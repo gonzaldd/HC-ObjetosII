@@ -8,19 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import negocio.CategoriaDeConsultaABM;
 import negocio.ConsultaABM;
-import negocio.LoginABM;
 import negocio.PacienteABM;
 import negocio.ProfesionalABM;
-<<<<<<< HEAD
-=======
-import negocio.UsuarioABM;
-import datos.Consulta;
->>>>>>> origin/master
 import datos.Funciones;
-import datos.Login;
 import datos.Paciente;
 import datos.Profesional;
-import datos.Usuario;
 import datos.categoriaDeConsulta;
 
 public class ControladorAgregarConsulta extends HttpServlet {
@@ -54,16 +46,7 @@ public class ControladorAgregarConsulta extends HttpServlet {
 		CategoriaDeConsultaABM categoriaAbm= new CategoriaDeConsultaABM();
 		int idCategoriaDeConsulta = Integer.parseInt(request.getParameter("idCategoriaDeConsulta"));
 		categoriaDeConsulta categoria = categoriaAbm.traerCategoria(idCategoriaDeConsulta);
-		
-<<<<<<< HEAD
-=======
-		/*
-		int idPaciente = Integer.parseInt(request.getParameter("idPaciente"));
-		int idCategoriaDeConsulta= Integer.parseInt(request.getParameter("idCategoriaDeConsulta"));
-		int idProfesional = Integer.parseInt(request.getParameter("idProfesional"));
-		*/
-		/*
->>>>>>> origin/master
+
 		GregorianCalendar fechaDeAtencion = Funciones.traerFecha(request.getParameter("fechaDeAtencion"));
 		String diagnostico = request.getParameter("diagnostico");
 		
