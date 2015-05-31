@@ -3,10 +3,11 @@ package dao;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import datos.Login;
 
+import datos.Consulta;
+import datos.Usuario;
 
-public class LoginDao {
+public class UsuarioDao {
 	
 	private static Session session;
 	private Transaction tx;
@@ -22,60 +23,60 @@ public class LoginDao {
 		tx.rollback();
 		throw new HibernateException("ERROR en la capa de acceso a datos", he);
 	}
+
 	
-	public Login usuarioValido(int usuario) throws HibernateException {
+	//alta nuevo usuario
+	public int agregarUsuario(Usuario objeto) {
 		
-		Login objeto = null;
+		int id = 0;
 		
 		try {
 			iniciaOperacion();
-			objeto = (Login)session.createQuery("from Login where usuarioLogin = "+Integer.toString(usuario)).uniqueResult();
-
-		}catch(HibernateException he){
+			id = Integer.parseInt(session.save(objeto).toString());
+			tx.commit();
+		
+		} catch (HibernateException he) {
 			manejaExcepcion(he);
 			throw he;
 		
-		}finally {
+		} finally {
 			session.close();
 		}
-		
-		return objeto;
+	return id;
 	}
 	
 	
-	public Login traerLogin(int idLogin) throws HibernateException {
-		Login objeto = null;
+	public void modificarUsuario(Usuario objeto) throws HibernateException {
+		
+		try {
+			iniciaOperacion();
+			session.update(objeto);
+			tx.commit();
+		
+		} catch (HibernateException he) {
+			manejaExcepcion(he);
+			throw he;
+		
+		} finally {
+			session.close();
+		}
+	}
+	
+	
+
+	public Usuario traerUsuario(int idLogin) throws HibernateException {
+		Usuario objeto = null;
 
 		try {
 			iniciaOperacion();
-			objeto = (Login) session.get(Login.class, idLogin);
+			objeto = (Usuario) session.get(Usuario.class, idLogin);
 
 		} finally {
 			session.close();
 		}
-	
+		
 	return objeto;
 	}
 	
-	
-	public int agregarLogin(Login objeto){
-		
-		int id=0;
-		
-		try{
-			iniciaOperacion();
-			id=Integer.parseInt(session.save(objeto).toString());
-			tx.commit();
-		
-		} catch(HibernateException he){
-			manejaExcepcion(he);
-			throw he;
-		
-		}finally{
-			session.close();
-		}
-	
-		return id;	
-	}
 	
 }

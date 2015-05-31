@@ -2,18 +2,14 @@ package controladores;
 
 import java.io.IOException;
 import java.util.GregorianCalendar;
-import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import negocio.CategoriaDeConsultaABM;
 import negocio.ConsultaABM;
 import negocio.PacienteABM;
 import negocio.ProfesionalABM;
-import datos.Consulta;
 import datos.Funciones;
 import datos.Paciente;
 import datos.Profesional;
@@ -38,39 +34,28 @@ public class ControladorAgregarConsulta extends HttpServlet {
 	try {
 		 
 		ConsultaABM consultaAbm=new ConsultaABM();
-		Consulta consulta= new Consulta();
 		
 		PacienteABM pacienteAbm = new PacienteABM();
 		int dniPaciente = Integer.parseInt(request.getParameter("dniPaciente"));
 		Paciente paciente = pacienteAbm.traerPacientePorDni(dniPaciente);
 		
-		/*ProfesionalABM profesionalAbm= new ProfesionalABM();
+		ProfesionalABM profesionalAbm= new ProfesionalABM();
 		int idProfesional = Integer.parseInt(request.getParameter("idProfesional"));
 		Profesional profesional = profesionalAbm.traerProfesional(idProfesional);
 		
 		CategoriaDeConsultaABM categoriaAbm= new CategoriaDeConsultaABM();
 		int idCategoriaDeConsulta = Integer.parseInt(request.getParameter("idCategoriaDeConsulta"));
 		categoriaDeConsulta categoria = categoriaAbm.traerCategoria(idCategoriaDeConsulta);
-		*/
-		/*
-		int idPaciente = Integer.parseInt(request.getParameter("idPaciente"));
-		int idCategoriaDeConsulta= Integer.parseInt(request.getParameter("idCategoriaDeConsulta"));
-		int idProfesional = Integer.parseInt(request.getParameter("idProfesional"));
-		*/
-		/*
+		
 		GregorianCalendar fechaDeAtencion = Funciones.traerFecha(request.getParameter("fechaDeAtencion"));
 		String diagnostico = request.getParameter("diagnostico");
-		*/
 		
-		//int idConsulta = consultaAbm.agregarConsulta(paciente.getIdPaciente(), profesional.getIdProfesional(), categoria.getIdCategoriaDeConsulta(), fechaDeAtencion, diagnostico);
-		//request.setAttribute("idConsulta", idConsulta);
+		
+		int consulta = consultaAbm.agregarConsulta(paciente.getIdPaciente(), profesional.getIdProfesional(), categoria.getIdCategoriaDeConsulta(), fechaDeAtencion, diagnostico);
+		
 		request.setAttribute("paciente", paciente);
-		/*request.setAttribute("dniPaciente", dniPaciente);
-		request.setAttribute("idCategoriaDeConsulta", idCategoriaDeConsulta);
-		request.setAttribute("idProfesional", idProfesional);
-		request.setAttribute("fechaDeAtencion", fechaDeAtencion);
-		request.setAttribute("diagnostico", diagnostico);
-		*/
+		request.setAttribute("consulta", consulta);
+		
 		request.getRequestDispatcher("/vistaAgregarConsulta.jsp").forward(request ,response);
 	
 	} catch (Exception e) {

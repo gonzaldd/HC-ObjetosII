@@ -23,43 +23,13 @@ Nombre: <%= paciente.getNombrePaciente() %><BR>
 DNI : <%= paciente.getDniPaciente() %><BR>
 Activo : <%= paciente.isActivoPaciente() %><BR>
 
-<% Consulta consulta=(Consulta)request.getAttribute("consulta"); %>
+<% int idConsulta=(int)request.getAttribute("consulta"); %>
 <BR>
-<FORM method="POST" action=" /HC/MostrarHistoriaClinica ">
-<TABLE border="0">
-
-<TR>
-<TD>
-<TD>Id Profesional:</TD>
-	<TD><INPUT type="number"  name="idProfesional"></TD>
-</TR>
-<TR>
-<TD>
-<TD>Id Categoria de consulta:</TD>
-	<TD><INPUT type="number" name="idCategoriaDeConsulta"></TD>
-</TR>
-<TR>
-<TD>
-<TD>Fecha:</TD>
-	<TD><INPUT type="date" name="fechaDeAtencion"></TD>
-</TR>
-<TR>
-<TD>
-<TD>Diagnostico:</TD>
-	<TD><textarea name="diagnostico" rows="10" cols="30"></textarea></TD>
-</TR>
-<TR>
-<TD>
+Consulta agregada con exito. ID Consulta: <%=idConsulta%>
 <BR>
-<INPUT type="submit" value="Agregar Consulta">
-</TD>
-</TR>
-</TABLE>
-</FORM>
-
-
 <BR>
-
+<A href="/HC/historiaClinica.html">Ver Historia Clinica...</A>
+<BR>
 <BR>
 <A href="/HC/index.html">Volver...</A>
 </BODY>
