@@ -30,6 +30,7 @@ public class ControladorCambioClave extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 
 		HttpSession sesion = request.getSession();
+		
 		int usuario = Integer.parseInt(request.getParameter("user"));
 		String passActual = request.getParameter("passActual");
 		String passNueva = request.getParameter("passNueva");
@@ -37,15 +38,39 @@ public class ControladorCambioClave extends HttpServlet {
 		LoginABM login = new LoginABM();
 		
 		try{
-			if(sesion.getAttribute("usuario") == null){
+			
 				Login l = login.usuarioValido(usuario);
 				
-				if(l != null){
-					if(login.passValida(passActual, l)){
-						Login objeto = login.cambiarClave(l, passNueva);
-						System.out.println(l);
+			
+					if(login.passValida(passActual, l)  )   {
 						
-					}else{
+						
+						Login objeto = login.cambiarClave(l, passNueva);
+					
+						resultado = "Cambio clave exitoso.";
+						request.setAttribute("resultado", resultado);
+						request.getRequestDispatcher("/logueoExitoso.jsp").forward(request ,response);
+					
+					
+					
+					} else 
+					{
+						resultado ="Ingresaste mal usuario o contraseña.";
+						request.setAttribute("resultado", resultado);
+						request.getRequestDispatcher("/resultadoLogin.jsp").forward (request, response);
+					}
+					
+					
+				
+					
+						
+						
+				}catch (Exception e){
+					response.sendError(500, "Error en el servidor.");
+				}			
+				
+			}
+					/*}else{
 						resultado = "Contraseña incorrecta.";
 						request.setAttribute("resultado", resultado);
 						request.getRequestDispatcher("/resultadoLogin.jsp").forward(request ,response);
@@ -67,7 +92,7 @@ public class ControladorCambioClave extends HttpServlet {
 			response.sendError(500, "Error en el servidor.");
 		}			
 		
-	}
+	} */
 	
 	protected void logout(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
