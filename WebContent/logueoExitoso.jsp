@@ -7,18 +7,21 @@
   <link rel="stylesheet" href="static/css/bootstrap.min.css">
   <link rel="stylesheet" href="static/css/jquery.bxslider.css">
   <link rel="stylesheet" href="static/css/estilos.css">
-<title>Resultado del login</title>
+<title>Insert title here</title>
 </head>
 <body>
 
 
 
-Situacion: <%= request.getAttribute("resultado") %>
-
-
 <form method="GET" action="/HC/login">
-   		<input type="submit" value="Cerrar sesión">
+   		<input type="submit" value="Salir">
 </form>
+
+<BR><BR>
+
+<li><a href="/HC/cambioClave.jsp">Cambiar de clave</a></li>
+<BR>
+<li><a href="historiaClinica.html">Historia clínica de paciente</a></li>
 
 
 

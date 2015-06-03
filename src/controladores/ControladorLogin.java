@@ -49,9 +49,14 @@ public class ControladorLogin extends HttpServlet {
 					if(login.passValida(pass, l) && Funciones.comparadorIps(ip,ipInet)==0){
 						//if(addressCadena=="169.254.196.78"){
 							sesion.setAttribute("usuario", usuario);
-							resultado = "Logueo con exito!"+ip;
-							request.setAttribute("resultado", resultado);
-							request.getRequestDispatcher("/resultadoLogin.jsp").forward(request ,response);
+							
+							
+							
+							request.getRequestDispatcher("/logueoExitoso.jsp").forward(request ,response);
+							
+							
+							
+							
 						//}
 					}else if(login.passValida(pass, l) && Funciones.comparadorIps(ip,ipInet)!=0){
 						resultado = "No puede iniciar sesión. Computadora no autorizada. ip del request: "+ip;

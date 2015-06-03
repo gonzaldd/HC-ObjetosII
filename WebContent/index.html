@@ -45,8 +45,8 @@
 
           </ul>
 
-          <form id="signin" class="navbar-form navbar-right" role="form" method="post">
-            <!-- <div class="input-group">
+          <!-- <form id="signin" class="navbar-form navbar-right" role="form" method="post" action="/HC/login">
+            <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
               <input id="usuario" type="number" class="form-control" name="usuario" value="" placeholder="Usuario" autofocus>                                        
             </div>
@@ -54,10 +54,17 @@
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
               <input id="clave" type="password" class="form-control" name="clave" value="" placeholder="Contraseña">
-            </div> -->
+            </div> 
 
-            <button id="inicio" type="submit" class="btn btn-primary"><a href="/HC/logueo.jsp"> Iniciar sesión</a></button>
-          </form>
+           <button id="inicio" type="submit" class="btn btn-primary"><a href="/HC/logueo.jsp"> Iniciar sesión</a></button>
+          </form>  -->
+          
+          
+          <form method="POST" action="/HC/login" class="navbar-form navbar-right" role="form">
+   <input  type="number" class="form-control"  name="user" placeholder="Usuario" autofocus><br>
+   <input type="password" class="form-control" name="pass" placeholder="Contraseña"><br>
+ <button id="inicio" type="submit" class="btn btn-primary"><a href="/HC/resultadoLogin.jsp"> Iniciar sesión</a></button>
+</form>
 
 
       
@@ -82,9 +89,7 @@
 
     </div>
       <a href="prueba.html">Pruebas/Tests</a>
-    </div>
-
-  </div>
+    
 
   <footer>
     <div class="container">
@@ -92,11 +97,9 @@
         <div class="col-xs-6">
           <p id="pie">Barros Bruno Jair - Cascardo Sebastián - De Domingo Gonzalo - Rodríguez Esteban</p>
         </div>
-        <div class="col-xs-6">
-          <ul class="list-inline text-right">
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </div>
+          </div>
+            </div>
+        
   </footer>
 
 </body>

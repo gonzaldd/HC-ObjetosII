@@ -43,10 +43,7 @@ public class ControladorCambioClave extends HttpServlet {
 				if(l != null){
 					if(login.passValida(passActual, l)){
 						Login objeto = login.cambiarClave(l, passNueva);
-					
-						resultado = "Cambio clave exitoso.";
-						request.setAttribute("resultado", resultado);
-						request.getRequestDispatcher("/resultadoLogin.jsp").forward(request ,response);
+						System.out.println(l);
 						
 					}else{
 						resultado = "Contraseña incorrecta.";
