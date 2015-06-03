@@ -9,11 +9,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import datos.Funciones;
 import datos.Login;
 import negocio.LoginABM;
 
-public class ControladorLogin extends HttpServlet {
+public class ControladorCambioClave extends HttpServlet {
+	
+	
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		logout(request, response);
@@ -28,36 +29,21 @@ public class ControladorLogin extends HttpServlet {
 	private void procesarPeticion(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
 
-
 		HttpSession sesion = request.getSession();
 		int usuario = Integer.parseInt(request.getParameter("user"));
-		String pass = request.getParameter("pass");
-		String ip = InetAddress.getLocalHost().getHostAddress();
-		String ipInet = "10.4.11.13";
-
+		String passActual = request.getParameter("passActual");
+		String passNueva = request.getParameter("passNueva");
 		String resultado = "";
 		LoginABM login = new LoginABM();
 		
 		try{
 			if(sesion.getAttribute("usuario") == null){
 				Login l = login.usuarioValido(usuario);
+				
 				if(l != null){
-					/*
-					InetAddress address = InetAddress.getLocalHost();
-					String addressCadena = address.getHostAddress();
-					*/
-					if(login.passValida(pass, l) && Funciones.comparadorIps(ip,ipInet)==0){
-						//if(addressCadena=="169.254.196.78"){
-							sesion.setAttribute("usuario", usuario);
-							resultado = "Logueo con exito!"+ip;
-							request.setAttribute("resultado", resultado);
-							request.getRequestDispatcher("/resultadoLogin.jsp").forward(request ,response);
-						//}
-					}else if(login.passValida(pass, l) && Funciones.comparadorIps(ip,ipInet)!=0){
-						resultado = "No puede iniciar sesión. Computadora no autorizada. ip del request: "+ip;
-						request.setAttribute("resultado", resultado);
-						request.getRequestDispatcher("/resultadoLogin.jsp").forward(request ,response);
-						
+					if(login.passValida(passActual, l)){
+						Login objeto = login.cambiarClave(l, passNueva);
+						System.out.println(l);
 						
 					}else{
 						resultado = "Contraseña incorrecta.";

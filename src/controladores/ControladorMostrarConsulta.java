@@ -24,9 +24,9 @@ public class ControladorMostrarConsulta extends HttpServlet {
 	
 	private void procesarPeticion(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
-		HttpSession sesion = request.getSession();
+		//HttpSession sesion = request.getSession();
 		
-		if(sesion.getAttribute("usuario") != null){
+		//if(sesion.getAttribute("usuario") != null){
 		
 		try {
 			int idConsulta = Integer.parseInt(request.getParameter("idConsulta"));
@@ -38,6 +38,6 @@ public class ControladorMostrarConsulta extends HttpServlet {
 		} catch (Exception e) {
 			response.sendError(500, "la idConsulta Ingresada no existe en la base de datos.");
 		}
-	}else response.sendRedirect("/HC/logueo.jsp");
+	//}else response.sendRedirect("/HC/logueo.jsp");
 	}
 }

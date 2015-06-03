@@ -324,5 +324,15 @@ public class Funciones {
 		return listaFeriados;
 	}
 	
+	
+	public static int comparadorIps(String ip1, String ip2){
+		int resultado=0;
+		
+		resultado = ip1.compareTo(ip2);
+		
+		return resultado;
+	}
+	
+	
 }
 

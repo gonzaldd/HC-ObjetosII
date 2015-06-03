@@ -3,7 +3,9 @@ package dao;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
 import datos.Login;
+import datos.Paciente;
 
 
 public class LoginDao {
@@ -21,6 +23,24 @@ public class LoginDao {
 		
 		tx.rollback();
 		throw new HibernateException("ERROR en la capa de acceso a datos", he);
+	}
+	
+	//modificar Login
+	public void modificarLogin(Login objeto) throws HibernateException {
+		
+		try {
+			iniciaOperacion();
+			session.update(objeto);
+			tx.commit();
+		
+		} catch (HibernateException he) {
+			manejaExcepcion(he);
+			throw he;
+		
+		} finally {
+			session.flush();
+			session.close();
+		}
 	}
 	
 	public Login usuarioValido(int usuario) throws HibernateException {

@@ -16,8 +16,7 @@ public class Login {
 	  public Login () {}
 
 	public Login(int usuarioLogin, String claveLogin,GregorianCalendar ultimoIngresoLogin,GregorianCalendar ultimoCambioClaveLogin,
-			int tipoUsuario,
-			boolean activoLogin) {
+			int tipoUsuario, boolean activoLogin) {
 		super();
 		this.usuarioLogin = usuarioLogin;
 		this.claveLogin = claveLogin;
@@ -75,7 +74,7 @@ public class Login {
 		this.tipoUsuario = tipoUsuario;
 	}
 
-	public boolean isActivoLogin() {
+	public boolean getActivoLogin() {
 		return activoLogin;
 	}
 

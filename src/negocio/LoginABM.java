@@ -7,6 +7,7 @@ import dao.LoginDao;
 import datos.Consulta;
 import datos.Login;
 import datos.Paciente;
+import datos.Usuario;
 
 public class LoginABM {
 
@@ -26,6 +27,16 @@ public class LoginABM {
 				valido = true;
 				}	
 		return valido;
+	}
+	
+	public Login cambiarClave(Login usuario, String passNueva){
+		GregorianCalendar horarioCambioNuevo = new GregorianCalendar();
+		usuario.setUltimoCambioClaveLogin(horarioCambioNuevo);
+		usuario.setClaveLogin(passNueva);
+
+		dao.modificarLogin(usuario);
+
+		return usuario;
 	}
 	
 	
@@ -50,6 +61,20 @@ public class LoginABM {
 		}
 		
 	return dao.agregarLogin(l);
+	}
+	
+	
+	//modificar Login
+	@SuppressWarnings("null")
+	public void modificar(Login l) throws Exception{
+		
+		if (l!=null){
+			dao.modificarLogin(l);
+		}
+			
+		else{
+			throw new Exception("Usuario: " +l.getUsuarioLogin()+ " no existe para modificar.");
+		}
 	}
 	
 	
