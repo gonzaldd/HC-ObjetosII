@@ -33,7 +33,7 @@ public class ControladorLogin extends HttpServlet {
 		int usuario = Integer.parseInt(request.getParameter("user"));
 		String pass = request.getParameter("pass");
 		String ip = InetAddress.getLocalHost().getHostAddress();
-		String ipInet = "10.4.11.13";
+		String ipInet = "192.168.79.133";
 
 		String resultado = "";
 		LoginABM login = new LoginABM();
