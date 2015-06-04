@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 939bab666daf89f7474e34f8750791a812b18dee bruqin <brunojairbarros@hotmail.com> 1433116755 -0300	clone: from https://github.com/gonzaldd/HC-ObjetosII.git
+939bab666daf89f7474e34f8750791a812b18dee b09e3b1696f1d9b33165e89c2ea9bbf409424151 Esteban1940 <19esteban92@gmail.com> 1433307441 -0300	commit: Cambio de clave y reconocimiento de ip funcionando
+b09e3b1696f1d9b33165e89c2ea9bbf409424151 4722b5e6fce20644e0a8442447d740eda69c8377 Esteban1940 <19esteban92@gmail.com> 1433374900 -0300	commit (merge): Login desde index, cambio de clave y consulta de hcs una vez logueado
+4722b5e6fce20644e0a8442447d740eda69c8377 df983e475481ec5043e8e8bc361c76655b93dfa5 Esteban1940 <19esteban92@gmail.com> 1433374980 -0300	commit: cambio de clave logueado
+df983e475481ec5043e8e8bc361c76655b93dfa5 0b9461045d561237fe8a24a6dafdb983304a58d7 Esteban1940 <19esteban92@gmail.com> 1433447829 -0300	rebase finished: refs/heads/master onto 0b9461045d561237fe8a24a6dafdb983304a58d7

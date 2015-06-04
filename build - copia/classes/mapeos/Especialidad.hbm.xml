@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="datos.Especialidad" table="especialidad">
+		<id column="idEspecialidad" name="idEspecialidad">
+			<generator class="identity"/>
+		</id>
+
+		<property column="nombreEspecialidad" name="nombreEspecialidad" type="string"/>
+		<property column="descripcionEspecialidad" name="descripcionEspecialidad" type="string"/>
+		
+		
+		<many-to-one name="area" class="datos.Area" column="idArea" not-null="true"/>
+		
+		
+			<set name="profesional" table="profesional" inverse="true" lazy="true" fetch="select">
+		<key>
+			<column name="idProfesional" not-null="true" />
+		</key>
+		<one-to-many class="datos.Profesional" />
+	</set>
+		
+		
+	</class>
+</hibernate-mapping>

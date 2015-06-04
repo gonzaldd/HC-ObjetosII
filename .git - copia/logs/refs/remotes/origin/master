@@ -1,0 +1,6 @@
+2cc35215d5089384c07594dc8efa0a72015161c3 939bab666daf89f7474e34f8750791a812b18dee unknown <Esteban@WIN-BEHBF9TBV3E.(none)> 1433299371 -0300	fetch origin --prune: fast-forward
+939bab666daf89f7474e34f8750791a812b18dee b09e3b1696f1d9b33165e89c2ea9bbf409424151 Esteban1940 <19esteban92@gmail.com> 1433307480 -0300	update by push
+b09e3b1696f1d9b33165e89c2ea9bbf409424151 46fe98f298be59d6eb8af6b08d15b495f9c52a5a unknown <Esteban@WIN-BEHBF9TBV3E.(none)> 1433374837 -0300	fetch origin --prune: fast-forward
+46fe98f298be59d6eb8af6b08d15b495f9c52a5a 4722b5e6fce20644e0a8442447d740eda69c8377 Esteban1940 <19esteban92@gmail.com> 1433374944 -0300	update by push
+4722b5e6fce20644e0a8442447d740eda69c8377 df983e475481ec5043e8e8bc361c76655b93dfa5 Esteban1940 <19esteban92@gmail.com> 1433375005 -0300	update by push
+df983e475481ec5043e8e8bc361c76655b93dfa5 0b9461045d561237fe8a24a6dafdb983304a58d7 unknown <Esteban@WIN-BEHBF9TBV3E.(none)> 1433447827 -0300	pull --progress --rebase --prune origin master: fast-forward
