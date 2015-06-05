@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@page import="datos.Login"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,23 +8,72 @@
   <link rel="stylesheet" href="static/css/bootstrap.min.css">
   <link rel="stylesheet" href="static/css/jquery.bxslider.css">
   <link rel="stylesheet" href="static/css/estilos.css">
-<title>Insert title here</title>
+<title>Inicio</title>
 </head>
 <body>
+	<header>
+	    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+	    	<div class="container">
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
+		            <span class="sr-only">Desplegar / Ocultar menu</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+
+		          <a href="#" class="navbar-brand">Hospital Lanús</a>
+		          
+		        </div>
+		        <!-- Inicia Menu -->
+		        <div class="collapse navbar-collapse" id="navegacion-fm">
+		          <ul class="nav navbar-nav">
+		            <li class="dropdown">
+		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Mi perfil<span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="/HC/cambioClave.jsp">Cambiar clave</a></li>
+									<!-- La clase "divider" sirve para poner un separador-->
+									<li class="divider"></li>
+									<li><a href="/HC/login" value="Salir">Cerrar sesión</a></li>
+								</ul>
+		          </ul>
 
 
+		          	<form method="post" action="/HC/MostrarHistoriaClinica" class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" name="dniPaciente" class="form-control" placeholder="Buscar historia clínica..." autofocus>
+						</div>
+						<button type="submit" class="btn btn-primary">
+							<span class="glyphicon glyphicon-search"></span>
+						</button>
+					</form>
+					
+		        </div>
+		    </div>
+	    </nav>      
+  </header>
 
-<form method="GET" action="/HC/login">
-   		<input type="submit" value="Salir">
-</form>
+	<footer>
+		<div class="container">
+	      <div class="row">
+	        <div class="col-xs-6">
+	          <p id="pie">Barros Bruno Jair - Cascardo Sebastián - De Domingo Gonzalo - Rodríguez Esteban</p>
+	        </div>
+	        <div class="col-xs-6">
+	          <ul class="list-inline text-right">
+	            <li><a href="contacto.html">Contacto</a></li>
+	            <li><a href="objetivo.html">Nuestro objetivo</a></li>
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+	</footer>
+	
 
-<BR><BR>
 
-<li><a href="/HC/cambioClave.jsp">Cambiar de clave</a></li>
-<BR>
-<li><a href="historiaClinica.html">Historia clínica de paciente</a></li>
-
-
+  <script src="static/js/jquery.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+  <script src="static/js/jquery2.js"></script>
 
 </body>
 </html>

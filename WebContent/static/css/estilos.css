@@ -2,6 +2,16 @@
 	color:#8E0229;
 }
 
+.jumbotron {
+	background:#337ab7;
+	color:#FFF;
+	padding:20px 0;
+}
+
+.jumbotron .titulo-blog {
+	font-size:80px;
+}
+
 .navbar-inverse .navbar-nav>li>a{
 	color: #FFFFFF;
 	font-weight: bold;
@@ -37,8 +47,9 @@ footer {
 	padding: 5px;
 }
 
-
-.btn.btn-primary{
-	background-color: #FFFFFF;
-	color: #FFFFFF;
+#objetivo{
+	color: #8E0229;
+	font-weight: bold;
+	padding-left: 50px;
+	padding-right: 50px;
 }

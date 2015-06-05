@@ -12,13 +12,15 @@
 <body>
 
 
+	<div>
+		Situacion: <%= request.getAttribute("resultado") %>
 
-Situacion: <%= request.getAttribute("resultado") %>
+		<form method="GET" action="/HC/login">
+		   		<input type="submit" value="Cerrar sesión" class="btn btn-primary">
+		</form>
+	
+	</div>
 
-
-<form method="GET" action="/HC/login">
-   		<input type="submit" value="Cerrar sesión">
-</form>
 
 
 

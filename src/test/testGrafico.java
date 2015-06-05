@@ -3,7 +3,6 @@ package test;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-
 import javax.swing.JFrame;
 
 import negocio.CategoriaDeConsultaABM;
@@ -30,21 +29,22 @@ public class testGrafico extends JFrame  {
    
   super(applicationTitle);
 
+  // Creamos el conjunto de datos s
   DefaultCategoryDataset dataset = createDataset();
 
   JFreeChart chart = createChart(dataset, chartTitle);
- 
+  // Ponemos el gráfico en un panel
   ChartPanel chartPanel = new ChartPanel(chart);
-
+  // Dejamos el tamaño por defecto
   chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
-
+  // Lo añadimos a nuestra aplicación (PieChart)
   setContentPane(chartPanel);
 
  }
 
  private DefaultCategoryDataset createDataset() {
 	  DefaultCategoryDataset result = new DefaultCategoryDataset();
-	 
+	  
 	  	CategoriaDeConsultaABM categoriaabm=new CategoriaDeConsultaABM();
 	  	ConsultaABM consulta = new ConsultaABM();
 		List<categoriaDeConsulta> lista = categoriaabm.traerCategoria();
@@ -61,18 +61,17 @@ public class testGrafico extends JFrame  {
 	  return result;
 
 	 }
-
  
 
  private JFreeChart createChart(DefaultCategoryDataset dataset, String title) {
 
-  JFreeChart chart = ChartFactory.createBarChart3D(title, "Categoria de Consulta",
-    "% cantidad", dataset, 
-    PlotOrientation.VERTICAL, true, 
+  JFreeChart chart = ChartFactory.createBarChart3D(title, "Partido",
+    "votos", dataset, // data
+    PlotOrientation.VERTICAL, true, // include legend
     true, false);
   CategoryPlot plot = (CategoryPlot) chart.getPlot();
   CategoryAxis xAxis = (CategoryAxis) plot.getDomainAxis();
-  xAxis.setCategoryLabelPositions(CategoryLabelPositions.UP_45);
+  xAxis.setCategoryLabelPositions(CategoryLabelPositions.UP_45); // Inclinamos 45 grados las etiquetas del eje X
   plot.setBackgroundAlpha(0.5f);
   return chart;
 
