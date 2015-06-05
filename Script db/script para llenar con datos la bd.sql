@@ -1,22 +1,74 @@
+/*consulta*/
+insert into consulta(idPaciente,idProfesional,idCategoriaDeConsulta,fechaDeAtencion, diagnostico) values
+(1,1,1,'2013-01-01',"Fractura de tibia y perone luxación de hombro"),
+(1,2,4,'2014-08-15',"Luxación de hombro"),
+(1,2,4,'2014-08-15',"Presión baja"),
+(1,1,1,'2015-02-04',"Golpes en abdomen y fractura de dos costillas"),
+(2,8,2,'2015-01-01',"Traumatismo cervical"),
+(2,11,5,'2013-04-01',"Perforación y sangrado de pulmón derecho"),
+(2,2,4,'2015-05-01',"Desmayo. Se realizarán análisis"),
+(3,3,6,'2011-01-03',"Herida de bala en pierna derecha"),
+(3,3,5,'2015-02-09',"Corte superficial en la cara, se le darán puntos de sutura"),
+(3,10,1,'2015-01-01',"Traumatismo de craneo"),
+(4,4,5,'2011-02-04',"Gripe con mucha fiebre, se le darán 2 días de reposo en cama"),
+(4,9,2,'2015-03-21',"Varicela"),
+(4,4,2,'2012-04-11',"Traumatismo de torax"),
+(5,8,3,'2013-05-21',"Anorexia"),
+(5,1,3,'2014-06-11',"Baja presión"),
+(5,14,3,'2010-07-30',"ACV, se deja en terapia"),
+(6,2,1,'2015-08-21',"Cancer de pulmón"),
+(6,13,2,'2015-09-12',"Fractura de clavícula"),
+(6,3,6,'2015-10-15',"Perforación y sangrado de intestino"),
+(7,7,2,'2011-11-01',"Bajos niveles de azucar en sangre"),
+(7,1,2,'2011-12-14',"Vómitos y diarrea"),
+(7,10,2,'2014-11-05',"Dolor de muela"),
+(8,3,1,'2014-06-02',"Dolor fuerte de garganta"),
+(8,13,3,'2015-08-03',"Dolores agudos de estómago"),
+(8,2,2,'2011-03-08',"Traumatismo de cráneo"),
+(9,9,4,'2015-04-07',"Fiebre y estado gripal"),
+(9,4,3,'2011-04-06',"Coma alcohólico"),
+(9,10,5,'2012-11-05',"Herida cortante en cuello"),
+(10,3,4,'2015-12-01',"Faringitis aguda"),
+(10,7,2,'2012-11-06',"Traumatismo de craneo"),
+(10,12,6,'2015-06-16',"Perforación y sangrado de pulmon derecho"),
+(11,10,5,'2015-05-17',"Herida cortante en cuello"),
+(11,3,4,'2015-04-01',"Fiebre y estado gripal"),
+(11,7,2,'2012-03-25',"Golpes en todo el cuerpo, accidente vehicular"),
+(12,10,5,'2015-02-17',"Dolor fuerte de garganta"),
+(12,3,4,'2015-01-19',"Arritmia ventricular"),
+(12,7,2,'2013-08-01',"Locura temporal, probable esquizofrenia paranoide"),
+(13,10,5,'2015-09-01',"Intentos varios y variados de suicidios"),
+(13,3,4,'2015-08-15',"Sobredosis de cocaína"),
+(13,7,2,'2013-04-13',"Probable alergia a los animales"),
+(14,10,5,'2015-02-01',"Psicópata, directo al loquero"),
+(14,3,1,'2015-03-16',"Debe ir al urólogo, traerá resultados"),
+(14,7,2,'2013-04-18',"Traumatismo de craneo"),
+(15,10,3,'2015-05-01',"Accidente en la obra, perdió ambas piernas"),
+(15,3,2,'2015-04-17',"Ira narcisista"),
+(15,7,6,'2013-07-15',"Traumatismo de craneo"),
+(16,10,5,'2015-02-01',"Desmayo. Se realizarán análisis"),
+(16,3,4,'2013-05-12',"Gripe con mucha fiebre, se le darán 2 días de reposo en cama"),
+(16,7,2,'2011-01-13',"Arritmia ventricular"),
+(17,10,5,'2015-01-30',"Probable alergia a los animales"),
+(17,3,6,'2014-02-01',"Faringitis aguda"),
+(17,7,2,'2013-05-07',"Traumatismo de craneo"),
+(18,10,5,'2015-06-25',"Baja presión"),
+(18,3,4,'2013-08-22',"Faringitis aguda"),
+(18,7,5,'2015-04-21',"Traumatismo de craneo"),
+(19,10,1,'2014-07-09',"Desmayo. Se realizarán análisis"),
+(19,3,4,'2015-09-09',"Baja presión"),
+(19,7,2,'2012-04-08',"Gripe con mucha fiebre, se le darán 2 días de reposo en cama");
 
 
-/*login*/
-insert into login(usuarioLogin,claveLogin,ultimoIngresoLogin,ultimoCambioClaveLogin,tipoUsuario,activoLogin) values
-(1111,'abc1111','2015-05-24', '2015-04-01', 1,true),
-(2222,'abd2222','2015-05-24', '2015-04-01', 2,true),
-(3333,'abc3333','2015-05-24', '2015-04-01', 2,true),
-(4444,'abc4444','2015-05-24', '2015-04-01', 2,true),
-(5555,'abc5555','2015-05-24', '2015-04-01', 2,true),
-(6666,'abc6666','2015-05-24', '2015-04-01', 0,true),
-(7777,'abc7777','2015-05-24', '2015-04-01', 0,true),
-(8888,'abc8888','2015-05-24', '2015-04-01', 0,true),
-(9999,'abc9999','2015-05-24', '2015-04-01', 0,true),
-(1010,'abc1010','2015-05-24', '2015-04-01', 0,true),
-(1212,'abc1212','2015-05-24', '2015-04-01', 0,true),
-(71313,'abc1313','2015-05-24', '2015-04-01', 0,true),
-(1414,'abc1414','2015-05-24', '2015-04-01', 0,true),
-(1515,'abc1515','2015-05-24', '2015-04-01', 0,true),
-(1616,'abc1616','2015-05-24', '2015-04-01', 0,true);
+/*categoria de consulta*/
+insert into categoriadeconsulta values
+(1,'Riña callejera'),
+(2,'Accidente vial'),
+(3,'Intoxicación'),
+(4,'Descompensación en vía pública'),
+(5,'Herida de arma blanca'),
+(6,'Herida de bala');
+
 
 
 /*paciente*/
@@ -30,16 +82,16 @@ insert into paciente(nombrePaciente, apellidoPaciente,activoPaciente, dniPacient
 ('Fabian','Lopez',true,77777777),
 ('Cristina','Poblete',true,88888888),
 ('Ricardo','Centurion',true,99999999),
-('Elba','Salgado',true,11112222);
-
-/*categoria de consulta*/
-insert into categoriadeconsulta values
-(1,'riña callejera'),
-(2,'accidente vial'),
-(3,'intoxicacion'),
-(4,'descompensacion en via publica'),
-(5,'herida de arma blaca'),
-(6,'herida de bala');
+('Bruno','Barros',true,12345678),
+('Sebastián','Cascardo',true,10101010),
+('Gonzalo','De Domingo',true,12121212),
+('Esteban','Rodriguez',true,13131313),
+('Carlos','Garcia',true,14141414),
+('Juan','Lennon',true,15151515),
+('Pepe','Tet',true,16161616),
+('Alberto','Quintanilla',true,17171717),
+('Ricardo','Solari',true,18181818),
+('Felipe','Sanchez',true,19191919);
 
 /*contacto paciente*/
 
@@ -58,21 +110,21 @@ insert into contactopaciente values
 /*area*/
 insert into area values
 (1,'Urgencias',''),
-(2,'Consutorios Externos',''),
-(3,'Terapia Intensiva',''),
+(2,'Consutorios externos',''),
+(3,'Terapia intensiva',''),
 (4,'Maternidad',''),
-(5,'Analisis Clinicos',''),
+(5,'Analisis Clínicos',''),
 (6,'Quirofanos','');
 
 /*especialidad*/
 insert into especialidad(idArea,nombreEspecialidad,descripcionEspecialidad) values
-(1,'cardiologo', ''),
-(1,'medico clinico', ''),
-(2,'enfermera', ''),
-(3,'traumatologo', ''),
-(4,'medico residente', ''),
-(5,'psiquiatra', ''),
-(6,'cirujano', '');
+(1,'Cardiologo', ''),
+(1,'Médico clínico', ''),
+(2,'Enfermera', ''),
+(3,'Traumatólogo', ''),
+(4,'Medico residente', ''),
+(5,'Psiquiatra', ''),
+(6,'Cirujano', '');
 
 
 /*profesional*/
@@ -92,22 +144,6 @@ insert into profesional(idEspecialidad,matriculaProfesional,activoProfesional) v
 (7,1414,true),
 (7,1515,true);
 
-/*usuario*/
-insert into usuario(idLogin, nombreUsuario, apellidoUsuario, dniUsuario, idProfesional) values
-(1,'root', 'root', 55555555, 1),
-(2,'Carlos', 'Luna', 55555555, 2),
-(3,'Beatriz', 'Gimenez', 55555555, 3),
-(4,'Lara', 'Cruz', 55555555, 4),
-(5,'Enrique', 'Jaime', 55555555, 5),
-(6,'Pedro', 'Aldao', 55555555, 6),
-(7,'Juliana', 'Valentin', 55555555, 7),
-(8,'Celeste', 'Gomez', 55555555, 8),
-(9,'Pablo', 'Guino', 55555555, 9),
-(10,'Federico', 'Ramirez', 55555555, 10),
-(11,'Laura', 'Hache', 55555555, 11),
-(12,'Mariana', 'Fernandez', 55555555, 12),
-(13,'Julio', 'Paz', 55555555, 13),
-(14,'Mirta', 'Renzo', 55555555, 14);
 
 /*contacto profesional*/
 insert into contactoprofesional values
@@ -126,36 +162,55 @@ insert into contactoprofesional values
 (13,'1526262626','Bariloche 512', 'prof13@gfdgdf.com', '1985-06-05'),
 (14,'1527272727','Yrigoyen 2048', 'prof14@gfdgdf.com', '1961-02-22');
 
-/*consulta*/
-insert into consulta(idPaciente,idProfesional,idCategoriaDeConsulta,fechaDeAtencion, diagnostico) values
-(1,1,1,'2013-01-01',"fractura de tibia y perone; luxacion de hombro"),
-(1,2,4,'2014-08-15',"presion baja"),
-(1,1,1,'2015-02-04',"golpes en abdomen y fractura de dos costillas"),
-(2,8,2,'2015-01-01',"traumatismo cervical"),
-(2,11,5,'2015-01-01',"perforacion de pulmon derecho"),
-(2,2,4,'2015-01-01',"desmayo.Se realizaran analisis"),
-(3,3,6,'2015-01-01',"herida de bala en pierna derecha"),
-(3,3,5,'2015-01-01',"corta superficial en cara, se le daran puntos de sutura."),
-(3,10,1,'2015-01-01',"traumatismo de craneo"),
-(4,4,5,'2015-01-01',"gripe"),
-(4,9,2,'2015-01-01',"varicela"),
-(4,4,2,'2015-01-01',"tarumatismo de torax"),
-(5,8,3,'2015-01-01',"anorexia"),
-(5,1,3,'2015-01-01',"baja presion"),
-(5,14,3,'2015-01-01',"desmayo"),
-(6,2,1,'2015-01-01',"golpes en abdomen"),
-(6,13,2,'2015-01-01',"fractura de clavicula"),
-(6,3,6,'2015-01-01',"perforacion y sangrado de intestino"),
-(7,7,2,'2015-01-01',"bajos niveles de azucar en sangre"),
-(7,1,2,'2015-01-01',"vomitos y diarrea"),
-(7,10,2,'2015-01-01',"desmayo"),
-(8,3,1,'2015-01-01',"tarumatismo de torax"),
-(8,13,3,'2015-01-01',"dolores agudos de estomago"),
-(8,2,2,'2015-01-01',"traumatismo de craneo"),
-(9,9,4,'2015-01-01',"Fiebre y estado gripal"),
-(9,4,3,'2015-01-01',"coma alcoholico"),
-(9,10,5,'2015-01-01',"herida cortante en cuello"),
-(10,3,4,'2015-01-01',"Faringitis aguda"),
-(10,7,2,'2015-01-01',"traumatismo de craneo"),
-(10,12,6,'2015-01-01',"perforacion y sangrado de pulmon derecho");
+/*usuario*/
+insert into usuario(idLogin, nombreUsuario, apellidoUsuario, dniUsuario, idProfesional) values
+(1,'root', 'root', 55555555, 1),
+(2,'Carlos', 'Luna', 55555555, 2),
+(3,'Beatriz', 'Gimenez', 55555555, 3),
+(4,'Lara', 'Cruz', 55555555, 4),
+(5,'Enrique', 'Jaime', 55555555, 5),
+(6,'Pedro', 'Aldao', 55555555, 6),
+(7,'Juliana', 'Valentin', 55555555, 7),
+(8,'Celeste', 'Gomez', 55555555, 8),
+(9,'Pablo', 'Guino', 55555555, 9),
+(10,'Federico', 'Ramirez', 55555555, 10),
+(11,'Laura', 'Hache', 55555555, 11),
+(12,'Mariana', 'Fernandez', 55555555, 12),
+(13,'Julio', 'Paz', 55555555, 13),
+(14,'Mirta', 'Renzo', 55555555, 14),
+(15,'Mirta', 'Renzo', 55555555, 14),
+(16,'Mirta', 'Renzo', 55555555, 14),
+(17,'Mirta', 'Renzo', 55555555, 14),
+(18,'Mirta', 'Renzo', 55555555, 14),
+(19,'Gonzalo', 'De Domingo', 55555555, 2),
+(20,'Bruno', 'Barros', 55555555, 3),
+(21,'Esteban', 'Rodriguez', 55555555, 4);
+
+
+
+/*login*/
+insert into login(usuarioLogin,claveLogin,ultimoIngresoLogin,ultimoCambioClaveLogin,tipoUsuario,activoLogin) values
+(1111,'abc1111','2015-05-24', '2015-04-01', 1,true),
+(2222,'abc2222','2015-05-24', '2015-04-01', 2,true),
+(3333,'abc3333','2015-05-24', '2015-04-01', 2,true),
+(4444,'abc4444','2015-05-24', '2015-04-01', 2,true),
+(5555,'abc5555','2015-05-24', '2015-04-01', 2,true),
+(6666,'abc6666','2015-05-24', '2015-04-01', 0,true),
+(7777,'abc7777','2015-05-24', '2015-04-01', 0,true),
+(8888,'abc8888','2015-05-24', '2015-04-01', 0,true),
+(9999,'abc9999','2015-05-24', '2015-04-01', 0,true),
+(1010,'abc1010','2015-05-24', '2015-04-01', 0,true),
+(1212,'abc1212','2015-05-24', '2015-04-01', 0,true),
+(1313,'abc1313','2015-05-24', '2015-04-01', 0,true),
+(1414,'abc1414','2015-05-24', '2015-04-01', 0,true),
+(1515,'abc1515','2015-05-24', '2015-04-01', 0,true),
+(1616,'abc1616','2015-05-24', '2015-04-01', 0,true),
+(1717,'abc1717','2015-05-24', '2015-04-01', 0,true),
+(1818,'abc1818','2015-05-24', '2015-04-01', 0,true),
+(1919,'abc1919','2015-05-24', '2015-04-01', 0,true),
+(35686181,'35686181g','2015-05-24', '2015-04-01', 0,true),
+(37686735,'37686735b','2015-05-24', '2015-04-01', 0,true),
+(36982749,'36982749e','2015-05-24', '2015-04-01', 0,true);
+
+
 
