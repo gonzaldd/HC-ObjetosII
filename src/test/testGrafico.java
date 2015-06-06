@@ -53,6 +53,17 @@ public class testGrafico extends JFrame  {
 		GregorianCalendar anio=new GregorianCalendar();
 		String fecha=Funciones.traerFechaCorta(anio);
 		
+		/*
+		int cont=0;
+		for(int j=0; j<6; j++){
+			
+			consulta.devolverCantidad(lista);
+			
+			j++;
+		}
+		*/
+		System.out.println("cant de consultas"+ lista);
+		
 		for(categoriaDeConsulta categoria:lista){
 		result.setValue(consulta.traerCantConsulta(categoria.getIdCategoriaDeConsulta()),(categoria.getNombreCategoriaDeConsulta()),fecha);
 			i++;
@@ -65,8 +76,8 @@ public class testGrafico extends JFrame  {
 
  private JFreeChart createChart(DefaultCategoryDataset dataset, String title) {
 
-  JFreeChart chart = ChartFactory.createBarChart3D(title, "Partido",
-    "votos", dataset, // data
+  JFreeChart chart = ChartFactory.createBarChart3D(title, "categoria",
+    "cantidad", dataset, // data
     PlotOrientation.VERTICAL, true, // include legend
     true, false);
   CategoryPlot plot = (CategoryPlot) chart.getPlot();
@@ -76,13 +87,14 @@ public class testGrafico extends JFrame  {
   return chart;
 
  }
-
- public static void main(String[] args) {
+public static void main(String[] args) {
   testGrafico demo = new testGrafico("Estadisticas",
     "Estadisticas");
   demo.pack();
   demo.setVisible(true);
  }
+
+
 
 
 }

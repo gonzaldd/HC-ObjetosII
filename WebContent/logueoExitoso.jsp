@@ -28,6 +28,18 @@
 		        <!-- Inicia Menu -->
 		        <div class="collapse navbar-collapse" id="navegacion-fm">
 		          <ul class="nav navbar-nav">
+		          	<li class="dropdown">
+		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Funciones<span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">Agregar consulta</a></li>
+									<!-- La clase "divider" sirve para poner un separador-->
+									<li class="divider"></li>
+									<li><a href="/HC/historiaClinica.html">Ver historia clínica</a></li>
+									<li class="divider"></li>
+									<li><a href="#" value="Salir">Ver consultas entre fechas</a></li>
+									<li class="divider"></li>
+									<li><a href="#" value="Salir">Ver estadísticas de consultas</a></li>
+								</ul>
 		            <li class="dropdown">
 		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Mi perfil<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
@@ -61,8 +73,8 @@
 	        </div>
 	        <div class="col-xs-6">
 	          <ul class="list-inline text-right">
-	            <li><a href="contacto.html">Contacto</a></li>
-	            <li><a href="objetivo.html">Nuestro objetivo</a></li>
+	            <li><a href="contacto.html"><span style="font-weight: bold;">Contacto</span></a></li>
+	            <li><a href="objetivo.html"><span style="font-weight: bold;">Nuestro objetivo</span></a></li>
 	          </ul>
 	        </div>
 	      </div>

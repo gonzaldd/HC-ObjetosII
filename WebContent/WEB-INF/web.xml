@@ -81,4 +81,16 @@
     <servlet-name>ControladorCambioClave</servlet-name>
     <url-pattern>/cambioClave</url-pattern>
   </servlet-mapping>
+
+<servlet>
+		<servlet-name>ControladorGrafico</servlet-name>
+		<servlet-class>controladores.ControladorGrafico</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ControladorGrafico</servlet-name>
+		<url-pattern>/chart</url-pattern>
+</servlet-mapping>
+
+
+
 </web-app>

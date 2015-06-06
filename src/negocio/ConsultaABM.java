@@ -127,5 +127,23 @@ public class ConsultaABM {
 	return array;
 	}
 	
+	
+	//fijarse en cliente traer listado de clientes y contarlos con un for, pero lo hago para consultas!!!
+	
+	
+	/*
+	public int cantidadTotalDeConsultas(){
+		int cont=0;
+		
+		
+		while(consulta !=null){
+			
+			cont++;
+		}
+		return cont;
+			
+		}
+	}
+	*/
 }
 
