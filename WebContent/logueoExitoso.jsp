@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@page import="datos.Login"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -29,17 +28,29 @@
 		        <div class="collapse navbar-collapse" id="navegacion-fm">
 		          <ul class="nav navbar-nav">
 		          	<li class="dropdown">
-		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Funciones<span class="caret"></span></a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">Agregar consulta</a></li>
-									<!-- La clase "divider" sirve para poner un separador-->
-									<li class="divider"></li>
-									<li><a href="/HC/historiaClinica.html">Ver historia clínica</a></li>
-									<li class="divider"></li>
-									<li><a href="#" value="Salir">Ver consultas entre fechas</a></li>
-									<li class="divider"></li>
-									<li><a href="#" value="Salir">Ver estadísticas de consultas</a></li>
-								</ul>
+		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-labelledby="dLabel">Funciones<span class="caret"></span></a>
+			            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+			              <li><a href="/HC/agregarConsulta.html">Agregar consulta</a></li>
+			              <li class="divider"></li>
+			              <li><a href="/HC/historiaClinica.html">Buscar historia clínica</a></li>
+			              <li class="divider"></li>
+			              <li><a href="/HC/consultasEntreFechas.html">Ver consultas entre fechas</a></li>
+						  <li class="divider"></li>
+			              <li class="dropdown-submenu">
+			                <a tabindex="-1" href="#">Ver estadísticas de consultas</a>
+			                <ul class="dropdown-menu">
+			                  <li><a tabindex="-1" href="/HC/chart">Estadística estática</a></li>
+			                  <li class="dropdown-submenu">
+			                    <!-- <a href="#">Para un tercer nivel</a>
+			                    <ul class="dropdown-menu">
+			                        <li><a href="#">Link de tercer nivel</a></li>
+			                        <li><a href="#">Link de tercer nivel</a></li>
+			                    </ul> -->
+			                  </li>
+			                  <li><a href="/HC/mostrarEstadisticas">Estadística dinámica</a></li>
+			                </ul>
+			              </li>
+			            </ul>
 		            <li class="dropdown">
 		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Mi perfil<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
@@ -64,7 +75,23 @@
 		    </div>
 	    </nav>      
   </header>
-
+  
+  <div class="container">
+  	<h2 align="center"><span style="color:#8E0229; font-weight: bold;">Inicio</span></h2>
+	<hr>
+	<ul><span style="font-weight: bold;">
+		<li><a href="/HC/agregarConsulta.html">Agregar consulta</a></li>
+		<li><a href="/HC/historiaClinica.html">Buscar historia clínica</a></li>
+		<li><a href="/HC/consultasEntreFechas.html">Ver consultas entre fechas</a></li>
+		<li>Ver estadísticas de consultas</li>
+		<ul>
+			<li><a href="/HC/chart">Estadística estática</a></li>
+			<li><a href="/HC/mostrarEstadisticas">Estadística dinámica</a></li>
+		</ul>
+	</span></ul>
+  </div>
+  
+  <div>
 	<footer>
 		<div class="container">
 	      <div class="row">
@@ -80,7 +107,8 @@
 	      </div>
 	    </div>
 	</footer>
-	
+  </div>
+
 
 
   <script src="static/js/jquery.js"></script>

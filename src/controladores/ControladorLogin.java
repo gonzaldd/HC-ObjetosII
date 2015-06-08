@@ -33,7 +33,8 @@ public class ControladorLogin extends HttpServlet {
 		int usuario = Integer.parseInt(request.getParameter("user"));
 		String pass = request.getParameter("pass");
 		String ip = InetAddress.getLocalHost().getHostAddress();
-		String ipInet = "192.168.24.100";
+		String ipInet1 = "169.254.196.78"; // Barros
+		String ipInet2 = "192.168.24.100"; // Cascardo
 
 		String resultado = "";
 		LoginABM login = new LoginABM();
@@ -42,13 +43,17 @@ public class ControladorLogin extends HttpServlet {
 			if(sesion.getAttribute("usuario") == null){
 				Login l = login.usuarioValido(usuario);
 				if(l != null){
-					if(login.passValida(pass, l) && Funciones.comparadorIps(ip,ipInet)==0){
+					if(login.passValida(pass, l)) {
+						if(Funciones.comparadorIps(ip,ipInet1)==0 || (Funciones.comparadorIps(ip,ipInet2)==0)){
 							sesion.setAttribute("usuario", usuario);
 							request.getRequestDispatcher("/logueoExitoso.jsp").forward(request ,response);
-					}else if(login.passValida(pass, l) && Funciones.comparadorIps(ip,ipInet)!=0){
-						resultado = "No puede iniciar sesión. Computadora no autorizada. ip del request: "+ip;
-						request.setAttribute("resultado", resultado);
-						request.getRequestDispatcher("/resultadoLogin.jsp").forward(request ,response);
+					}}else if(login.passValida(pass, l)) {
+						if(Funciones.comparadorIps(ip,ipInet1)!=0 && (Funciones.comparadorIps(ip,ipInet2)!=0)){
+							resultado = "No puede iniciar sesión. Computadora no autorizada. ip del request: "+ip;
+							request.setAttribute("resultado", resultado);
+							request.getRequestDispatcher("/resultadoLogin.jsp").forward(request ,response);
+						}
+
 						
 						
 					}else{

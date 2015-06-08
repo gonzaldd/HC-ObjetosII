@@ -33,17 +33,29 @@
 		        <div class="collapse navbar-collapse" id="navegacion-fm">
 		          <ul class="nav navbar-nav">
 		          	<li class="dropdown">
-		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Funciones<span class="caret"></span></a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">Agregar consulta</a></li>
-									<!-- La clase "divider" sirve para poner un separador-->
-									<li class="divider"></li>
-									<li><a href="/HC/historiaClinica.html">Ver historia clinica</a></li>
-									<li class="divider"></li>
-									<li><a href="#" value="Salir">Ver consultas entre fechas</a></li>
-									<li class="divider"></li>
-									<li><a href="#" value="Salir">Ver estadísticas de consultas</a></li>
-								</ul>
+		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-labelledby="dLabel">Funciones<span class="caret"></span></a>
+			            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+			              <li><a href="/HC/agregarConsulta.html">Agregar consulta</a></li>
+			              <li class="divider"></li>
+			              <li><a href="/HC/historiaClinica.html">Buscar historia clínica</a></li>
+			              <li class="divider"></li>
+			              <li><a href="/HC/consultasEntreFechas.html">Ver consultas entre fechas</a></li>
+						  <li class="divider"></li>
+			              <li class="dropdown-submenu">
+			                <a tabindex="-1" href="#">Ver estadísticas de consultas</a>
+			                <ul class="dropdown-menu">
+			                  <li><a tabindex="-1" href="/HC/chart">Estadística estática</a></li>
+			                  <li class="dropdown-submenu">
+			                    <!-- <a href="#">Para un tercer nivel</a>
+			                    <ul class="dropdown-menu">
+			                        <li><a href="#">Link de tercer nivel</a></li>
+			                        <li><a href="#">Link de tercer nivel</a></li>
+			                    </ul> -->
+			                  </li>
+			                  <li><a href="/HC/mostrarEstadisticas">Estadística dinámica</a></li>
+			                </ul>
+			              </li>
+			            </ul>
 		            <li class="dropdown">
 		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Mi perfil<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
@@ -70,8 +82,7 @@
 	    </nav>      
   </header>
   
-  		<%--<%@ include file="/cabecera.jsp" %>  --%>
-  		<div>
+
 
 		<% Paciente p = (Paciente)request.getAttribute("paciente"); %>
 
@@ -102,7 +113,7 @@
 		<% List<Consulta> consultas=(List)request.getAttribute("consultas");
 			for(Consulta consulta:consultas){ %>
 			<tr>
-				<td><span style="text-align: center";><%= consulta.getIdConsulta() %></td>
+				<td><%= consulta.getIdConsulta() %></td>
 				<td><%= Funciones.traerFechaCorta(consulta.getFechaDeAtencion()) %></td>
 				<td><%= consulta.getDiagnostico() %></td>
 			</tr>

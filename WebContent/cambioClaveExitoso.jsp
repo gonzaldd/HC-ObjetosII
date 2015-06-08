@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -5,7 +7,7 @@
   <link rel="stylesheet" href="static/css/bootstrap.min.css">
   <link rel="stylesheet" href="static/css/jquery.bxslider.css">
   <link rel="stylesheet" href="static/css/estilos.css">
-<title>Realizar consulta entre fechas</title>
+<title>¡Cambio de clave exitoso!</title>
 </head>
 <body>
 	<header>
@@ -32,7 +34,7 @@
 			              <li class="divider"></li>
 			              <li><a href="/HC/historiaClinica.html">Buscar historia clínica</a></li>
 			              <li class="divider"></li>
-			              <li><a href="#">Ver consultas entre fechas</a></li>
+			              <li><a href="/HC/consultasEntreFechas.html">Ver consultas entre fechas</a></li>
 						  <li class="divider"></li>
 			              <li class="dropdown-submenu">
 			                <a tabindex="-1" href="#">Ver estadísticas de consultas</a>
@@ -62,7 +64,7 @@
 
 		          	<form method="post" action="/HC/MostrarHistoriaClinica" class="navbar-form navbar-right" role="search">
 						<div class="form-group">
-							<input type="text" name="dniPaciente" class="form-control" placeholder="Buscar historia clínica...">
+							<input type="text" name="dniPaciente" class="form-control" placeholder="Buscar historia clínica..." autofocus>
 						</div>
 						<button type="submit" class="btn btn-primary">
 							<span class="glyphicon glyphicon-search"></span>
@@ -74,22 +76,22 @@
 	    </nav>      
   </header>
   
+  <div class="container">
+  	<h2 align="center"><span style="color:#8E0229; font-weight: bold;">Inicio</span></h2>
+  	<h3><span style="color:#8E0229; font-weight: bold;">Cambio de clave exitoso</span></h3>
+	<hr>
+	<ul><span style="font-weight: bold;">
+		<li><a href="/HC/agregarConsulta.html">Agregar consulta</a></li>
+		<li><a href="/HC/historiaClinica.html">Buscar historia clínica</a></li>
+		<li><a href="/HC/consultasEntreFechas.html">Ver consultas entre fechas</a></li>
+		<li>Ver estadísticas de consultas</li>
+		<ul>
+			<li><a href="/HC/chart">Estadística estática</a></li>
+			<li><a href="/HC/mostrarEstadisticas">Estadística dinámica</a></li>
+		</ul>
+	</span></ul>
+  </div>
   
-	<div class="container">
-	    <h2 align="center"><span style="color:#8E0229; font-weight: bold;">Realizar consulta entre fechas</span></h2>
-	    <hr>
-	    <p><span style="color: #8E0229; font-weight: bold;">Búsqueda de las consultas realizadas por un paciente ingresando dos fechas.</p>
-	    <p><span style="color: #8E0229; font-weight: bold;">En ambos casos, el ingreso de la fecha tiene que tener el formato DD/MM/AAAA, por ejemplo: 15/03/2015.</p><br>
-	    
-	    <form method="POST" action="/HC/VerConsultas">
-		<input  class="form-control"  name="dniPaciente" placeholder="DNI paciente" autofocus><br>
-		<input  class="form-control"  name="fechaDesde" placeholder="Fecha desde"><br>
-		<input  class="form-control"  name="fechaHasta" placeholder="Fecha hasta"><br><br>
-		<button id="inicio" type="submit" class="btn btn-primary"><span style="color: #FFFFFF; cursor:pointer;">Realizar consulta</span></button>
-		</form>
-		
-	</div>
-
   <div>
 	<footer>
 		<div class="container">
@@ -106,8 +108,8 @@
 	      </div>
 	    </div>
 	</footer>
-	</div>
-	
+  </div>
+
 
 
   <script src="static/js/jquery.js"></script>

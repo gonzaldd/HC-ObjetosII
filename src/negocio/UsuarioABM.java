@@ -4,6 +4,7 @@ import java.util.GregorianCalendar;
 import java.util.List;
 
 import dao.UsuarioDao;
+import datos.Consulta;
 import datos.Login;
 import datos.Profesional;
 import datos.Usuario;
@@ -41,6 +42,18 @@ public class UsuarioABM {
 			throw new Exception("Cliente DNI: " +u.getIdUsuario()+ " no existe para modificar.");
 		}
 	}
+	
+	//traer consulta por id
+	
+	public Usuario traerUsuario(int idUsuario)throws Exception{
+		
+		Usuario u= dao.traerUsuario(idUsuario);
+		
+		if(u==null) throw new Exception("Consulta no existe.");
+		
+	return u;
+	}
+	
 	
 	
 	

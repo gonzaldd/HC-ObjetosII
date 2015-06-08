@@ -46,16 +46,17 @@ public class ControladorCambioClave extends HttpServlet {
 						
 						
 						login.cambiarClave(l, passNueva);
+						//login.enviarMail(l);
 					
-						resultado = "Cambio clave exitoso.";
+						resultado = "Cambio de clave exitoso.";
 						request.setAttribute("resultado", resultado);
-						request.getRequestDispatcher("/logueoExitoso.jsp").forward(request ,response);
+						request.getRequestDispatcher("/cambioClaveExitoso.jsp").forward(request ,response);
 					
 					
 					
 					} else 
 					{
-						resultado ="Ingresaste mal usuario o contraseña.";
+						resultado ="Usuario o contraseña incorrecta.";
 						request.setAttribute("resultado", resultado);
 						request.getRequestDispatcher("/resultadoLogin.jsp").forward (request, response);
 					}

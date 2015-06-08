@@ -4,6 +4,8 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import datos.ContactoPaciente;
+import datos.ContactoProfesional;
 import datos.Login;
 import datos.Paciente;
 
@@ -76,6 +78,25 @@ public class LoginDao {
 	
 	return objeto;
 	}
+	
+	/*public ContactoProfesional traerMail (String mailProfesional) throws HibernateException {
+		ContactoProfesional contactoProfesional= null;
+		
+		try {
+			iniciaOperacion();
+			contactoProfesional = (ContactoProfesional) session.get(ContactoProfesional.class, mailProfesional);
+			
+		} finally {
+			session.close();
+		}
+		
+		
+		
+		return contactoProfesional;
+		
+		
+	}
+	*/
 	
 	
 	public int agregarLogin(Login objeto){

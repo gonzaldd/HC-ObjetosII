@@ -16,7 +16,7 @@
 		Situacion: <%= request.getAttribute("resultado") %>
 
 		<form method="GET" action="/HC/login">
-		   		<input type="submit" value="Cerrar sesión" class="btn btn-primary">
+		   		<input type="submit" value="Volver al inicio" class="btn btn-primary">
 		</form>
 	
 	</div>

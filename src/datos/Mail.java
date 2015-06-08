@@ -38,7 +38,7 @@ public class Mail {
             texto.setText("Enviando múltiples adjuntos PRUEBA 4 - otros archivos");
 
             // Se compone el adjunto con el archivo (puede ser una imagen o cualquier otor archivo)
-            /*BodyPart adjunto = new MimeBodyPart();
+            BodyPart adjunto = new MimeBodyPart();
             adjunto.setDataHandler(
                 new DataHandler(new FileDataSource("D:/OO2/workspace/HC/WebContent/static/img/1.jpg")));
             adjunto.setFileName("1.jpg");
@@ -53,7 +53,7 @@ public class Mail {
             // Una MultiParte para agrupar texto y archivo(s) adjunto(s)
             MimeMultipart multiParte = new MimeMultipart();
             multiParte.addBodyPart(texto);
-            //multiParte.addBodyPart(adjunto);
+            multiParte.addBodyPart(adjunto);
             //multiParte.addBodyPart(adjunto2);
 
             // Se compone el correo, dando to, from, subject y el

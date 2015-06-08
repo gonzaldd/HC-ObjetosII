@@ -155,7 +155,7 @@ insert into contactopaciente values
 
 
 /*contacto profesional*/
-insert into contactoprofesional values
+insert into contactoprofesional (idProfesional,telefonoProfesional,direccionProfesional,mailProfesional, fechaDeNacimiento) values
 (1,'1512121212','Azcuenaga 789 ','prof1@gfdgdf.com', '1956-08-21'),
 (2,'1513131313','Tolasa 123', 'prof2@gfdgdf.com', '1972-10-08'),
 (3,'1514141414','Formosa 1059', 'prof3@gfdgdf.com', '1986-02-25'),
