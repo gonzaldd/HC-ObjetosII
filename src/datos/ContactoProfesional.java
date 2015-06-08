@@ -7,7 +7,7 @@ public class ContactoProfesional {
 	private int idProfesional;
 	private String telefonoProfesional;
 	private String direccionProfesional;
-	private String mailProfesional;
+	private static String mailProfesional;
 	private GregorianCalendar fechaDeNacimiento;
 	private Profesional profesional;
 	
@@ -45,7 +45,7 @@ public class ContactoProfesional {
 		this.direccionProfesional = direccionProfesional;
 	}
 
-	public String getMailProfesional() {
+	public static String getMailProfesional() {
 		return mailProfesional;
 	}
 

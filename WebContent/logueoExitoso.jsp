@@ -21,7 +21,7 @@
 		            <span class="icon-bar"></span>
 		          </button>
 
-		          <a href="#" class="navbar-brand">Hospital Lanús</a>
+		          <a href="/HC/logueoExitoso.jsp" class="navbar-brand">Hospital Lanús</a>
 		          
 		        </div>
 		        <!-- Inicia Menu -->

@@ -2,7 +2,18 @@ package controladores;
 
 import java.io.IOException;
 import java.net.InetAddress;
+import java.util.Properties;
 
+import javax.activation.DataHandler;
+import javax.activation.FileDataSource;
+import javax.mail.BodyPart;
+import javax.mail.Message;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,6 +22,7 @@ import javax.servlet.http.HttpSession;
 
 import datos.Login;
 import negocio.LoginABM;
+import datos.ContactoProfesional;
 
 public class ControladorCambioClave extends HttpServlet {
 	
@@ -46,11 +58,12 @@ public class ControladorCambioClave extends HttpServlet {
 						
 						
 						login.cambiarClave(l, passNueva);
-						//login.enviarMail(l);
 					
 						resultado = "Cambio de clave exitoso.";
 						request.setAttribute("resultado", resultado);
 						request.getRequestDispatcher("/cambioClaveExitoso.jsp").forward(request ,response);
+						login.enviarMailCambioCorrecto(l);
+					
 					
 					
 					
@@ -59,6 +72,7 @@ public class ControladorCambioClave extends HttpServlet {
 						resultado ="Usuario o contraseña incorrecta.";
 						request.setAttribute("resultado", resultado);
 						request.getRequestDispatcher("/resultadoLogin.jsp").forward (request, response);
+						login.enviarMailCambioIncorrecto(l);
 					}
 					
 					

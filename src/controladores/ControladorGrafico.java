@@ -35,7 +35,7 @@ public class ControladorGrafico extends HttpServlet {
 		OutputStream outputStream = response.getOutputStream();
 
 		JFreeChart chart = getChart();
-		int width = 1480;
+		int width = 1280;
 		int height = 768;
 		ChartUtilities.writeChartAsPNG(outputStream, chart, width, height);
 
@@ -53,11 +53,11 @@ public class ControladorGrafico extends HttpServlet {
 		String fecha=Funciones.traerFechaCorta(anio);
 		
 		for(categoriaDeConsulta categoria:lista){
-		result.setValue(consulta.traerCantConsulta(categoria.getIdCategoriaDeConsulta()),(categoria.getNombreCategoriaDeConsulta()),"al "+fecha);
+		result.setValue(consulta.traerCantConsulta(categoria.getIdCategoriaDeConsulta()),(categoria.getNombreCategoriaDeConsulta()),fecha);
 			i++;
 		}
 	
-		JFreeChart chart = ChartFactory.createBarChart3D("Estadisticas","Categoria de Consulta","Cantidad", result, PlotOrientation.VERTICAL, true, 
+		JFreeChart chart = ChartFactory.createBarChart3D("Estadisticas","Categoria de Consulta"," % Cantidad", result, PlotOrientation.VERTICAL, true, 
 				    true, false);
 
 		chart.setBorderPaint(Color.BLUE);

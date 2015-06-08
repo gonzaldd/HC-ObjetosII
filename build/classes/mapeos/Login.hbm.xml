@@ -14,7 +14,7 @@
 	<property column="activoLogin" name="activoLogin" type="boolean"/>
 	
 
-	<!--<one-to-one name="usuario" class="datos.Usuario"/>-->
+	<one-to-one name="usuario" class="datos.Usuario"/>
 
 </class>
 </hibernate-mapping>

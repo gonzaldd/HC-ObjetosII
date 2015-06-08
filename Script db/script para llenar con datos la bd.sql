@@ -1,24 +1,24 @@
 /*area*/
-insert into area values
-(1,'Urgencias',''),
-(2,'Consutorios externos',''),
-(3,'Terapia intensiva',''),
-(4,'Maternidad',''),
-(5,'Analisis Clínicos',''),
-(6,'Quirofanos','');
+insert into area (nombreArea, descripcionArea) values
+('Urgencias',''),
+('Consutorios externos',''),
+('Terapia intensiva',''),
+('Maternidad',''),
+('Analisis Clínicos',''),
+('Quirofanos','');
 
 /*categoria de consulta*/
-insert into categoriadeconsulta values
-(1,'Riña callejera'),
-(2,'Accidente vial'),
-(3,'Intoxicación'),
-(4,'Descompensación en vía pública'),
-(5,'Herida de arma blanca'),
-(6,'Herida de bala');
+insert into categoriadeconsulta (nombreCategoriaDeConsulta) values
+('Riña callejera'),
+('Accidente vial'),
+('Intoxicación'),
+('Descompensación en vía pública'),
+('Herida de arma blanca'),
+('Herida de bala');
 
 
 /*especialidad*/
-insert into especialidad(idArea,nombreEspecialidad,descripcionEspecialidad) values
+insert into especialidad (idArea,nombreEspecialidad,descripcionEspecialidad) values
 (1,'Cardiologo', ''),
 (1,'Médico clínico', ''),
 (2,'Enfermera', ''),
@@ -128,15 +128,8 @@ insert into consulta(idPaciente,idProfesional,idCategoriaDeConsulta,fechaDeAtenc
 (19,7,2,'2012-04-08',"Gripe con mucha fiebre, se le darán 2 días de reposo en cama");
 
 
-
-
-
-
-
-
 /*contacto paciente*/
-
-insert into contactopaciente values
+insert into contactopaciente (idPaciente, telefonoPaciente,direccionPaciente,mailPaciente,fechaDeNacimientoPaciente,nacionalidadPaciente) values
 (1,'1511111111','Laprida 123', 'jp@gmail.com','1972-08-21','arg'),
 (2,'1522222222','Loria 456', 'sg@gmail.com','1985-01-05','arg'),
 (3,'1533333333','J B Justo 890', 'pr@gmail.com','1945-06-15','arg'),
@@ -149,15 +142,10 @@ insert into contactopaciente values
 (10,'1510101010','9 De Julio 256', 'es@gmail.com','1999-08-14','arg');
 
 
-
-
-
-
-
 /*contacto profesional*/
-insert into contactoprofesional (idProfesional,telefonoProfesional,direccionProfesional,mailProfesional, fechaDeNacimiento) values
-(1,'1512121212','Azcuenaga 789 ','prof1@gfdgdf.com', '1956-08-21'),
-(2,'1513131313','Tolasa 123', 'prof2@gfdgdf.com', '1972-10-08'),
+insert into contactoprofesional (idProfesional, telefonoProfesional,direccionProfesional,mailProfesional, fechaDeNacimiento)values
+(1,'1512121212','Azcuenaga 789 ','brunojairbarros@hotmail.com', '1956-08-21'),
+(2,'1513131313','Tolasa 123', '19esteban92@gmail.com', '1972-10-08'),
 (3,'1514141414','Formosa 1059', 'prof3@gfdgdf.com', '1986-02-25'),
 (4,'1515151515','Granaderos 871', 'prof4@gfdgdf.com', '1966-05-15'),
 (5,'1516161616','Balcace 421', 'prof5@gfdgdf.com', '1980-01-01'),
@@ -219,13 +207,3 @@ insert into usuario(idLogin, nombreUsuario, apellidoUsuario, dniUsuario, idProfe
 (19,'Gonzalo', 'De Domingo', 55555555, 2),
 (20,'Bruno', 'Barros', 55555555, 3),
 (21,'Esteban', 'Rodriguez', 55555555, 4);
-
-
-
-
-
-
-
-
-
-

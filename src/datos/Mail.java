@@ -4,7 +4,6 @@ import java.util.Properties;
 
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
-
 import javax.mail.BodyPart;
 import javax.mail.Message;
 import javax.mail.Session;
@@ -14,12 +13,16 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
+import datos.ContactoProfesional;
 
 public class Mail {
 	
     public static void main(String[] args)
     {
-        try
+        
+    	String mail = ContactoProfesional.getMailProfesional();
+    	
+    	try
         {
           // se obtiene el objeto Session. La configuración es para
           // una cuenta de gmail.
@@ -62,7 +65,7 @@ public class Mail {
             message.setFrom(new InternetAddress("grupo8.hc@gmail.com"));
             message.addRecipient(
                 Message.RecipientType.TO,
-                new InternetAddress("brunojairbarros@hotmail.com"));
+                new InternetAddress(mail));
             message.setSubject("Hola");
             message.setContent(multiParte);
 
