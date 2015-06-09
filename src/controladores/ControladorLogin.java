@@ -44,22 +44,26 @@ public class ControladorLogin extends HttpServlet {
 			if(sesion.getAttribute("usuario") == null){		//2
 				Login l = login.usuarioValido(usuario);
 				if(l != null){  							//3
+					
+					
 					if(login.passValida(pass, l)) {			//4
 						if(Funciones.comparadorIps(ip,ipInet1)==0 || (Funciones.comparadorIps(ip,ipInet2)==0)
 							|| (Funciones.comparadorIps(ip,ipInet3)==0)){		//5
 							sesion.setAttribute("usuario", usuario);
 							request.getRequestDispatcher("/logueoExitoso.jsp").forward(request ,response);
-			/*4,5*/		}}else if(login.passValida(pass, l)) {		//6
-						if(Funciones.comparadorIps(ip,ipInet1)!=0 || (Funciones.comparadorIps(ip,ipInet2)!=0)
-								|| (Funciones.comparadorIps(ip,ipInet3)!=0)){  //7
-							resultado = "No puede iniciar sesión. Computadora no autorizada. ip del request: "+ip;
-							request.setAttribute("resultado", resultado);
-							request.getRequestDispatcher("/resultadoLogin.jsp").forward(request ,response);
-						}
+							
+							
+			/*5*/		}	
+						else if(Funciones.comparadorIps(ip,ipInet1)!=0 && (Funciones.comparadorIps(ip,ipInet2)!=0)
+								&& (Funciones.comparadorIps(ip,ipInet3)!=0)){  //6
+							
+							sesion.setAttribute("usuario", usuario);
+							request.getRequestDispatcher("/logueoExterno.jsp").forward(request ,response);
+			/*6*/			} 
 
 						
 						
-					}else{
+	/*4*/					}else{
 						resultado = "Contraseña incorrecta.";
 						request.setAttribute("resultado", resultado);
 						request.getRequestDispatcher("/resultadoLogin.jsp").forward(request ,response);

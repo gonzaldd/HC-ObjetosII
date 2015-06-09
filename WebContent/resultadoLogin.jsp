@@ -57,7 +57,7 @@
   	<h2 align="center"><span style="color:#8E0229; font-weight: bold;">Inicio de sesión incorrecto</span></h2>
 	<hr>
 	
-		Situacion: <%= request.getAttribute("resultado") %><br>
+		Situación: <%= request.getAttribute("resultado") %><br>
 
 		<form method="GET" action="/HC/login">
 		   		<input type="submit" value="Volver al inicio" class="btn btn-primary">

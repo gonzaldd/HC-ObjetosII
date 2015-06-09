@@ -325,7 +325,7 @@ public class Funciones {
 	}
 	
 	
-	public static int comparadorIps(String ip1, String ip2){
+	public static  int comparadorIps(String ip1, String ip2){
 		int resultado=0;
 		
 		resultado = ip1.compareTo(ip2);
