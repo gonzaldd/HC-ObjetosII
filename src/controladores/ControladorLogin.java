@@ -34,7 +34,7 @@ public class ControladorLogin extends HttpServlet {
 		String pass = request.getParameter("pass");
 		String ip = InetAddress.getLocalHost().getHostAddress();
 		String ipInet1 = "169.254.196.78"; // Barros
-		String ipInet2 = "192.168.24.200"; // Cascardo
+		String ipInet2 = "192.168.24.100"; // Cascardo
 		String ipInet3 = "192.168.79.133"; // Rodriguez
 
 		String resultado = "";
