@@ -41,6 +41,16 @@
     <servlet-name>ControladorMostrarHistoriaClinica</servlet-name>
     <url-pattern>/MostrarHistoriaClinica</url-pattern>
   </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>ControladorMostrarHistoriaClinicaExterno</servlet-name>
+    <servlet-class>controladores.ControladorMostrarHistoriaClinicaExterno</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControladorMostrarHistoriaClinicaExterno</servlet-name>
+    <url-pattern>/MostrarHistoriaClinicaExterno</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <servlet-name>ControladorEstadistica</servlet-name>
     <servlet-class>controladores.ControladorEstadisticas</servlet-class>
@@ -49,6 +59,17 @@
     <servlet-name>ControladorEstadistica</servlet-name>
     <url-pattern>/mostrarEstadisticas</url-pattern>
   </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>ControladorEstadisticasExterno</servlet-name>
+    <servlet-class>controladores.ControladorEstadisticasExterno</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControladorEstadisticasExterno</servlet-name>
+    <url-pattern>/mostrarEstadisticasExterno</url-pattern>
+  </servlet-mapping>
+  
+  
   <servlet>
     <servlet-name>ControladorAgregarConsulta</servlet-name>
     <servlet-class>controladores.ControladorAgregarConsulta</servlet-class>

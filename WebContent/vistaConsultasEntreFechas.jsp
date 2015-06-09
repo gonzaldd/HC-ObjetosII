@@ -81,6 +81,13 @@ pageEncoding="ISO-8859-1"%>
 	    </nav>      
   </header>
   
+    <div>
+      <figure>
+      <img src="static/img/logo.jpg" HEIGHT="100" WIDTH="100" align="left"/>
+    </figure>
+    </div>
+  
+  
 
 		<% Paciente p = (Paciente)request.getAttribute("paciente"); %>
 		

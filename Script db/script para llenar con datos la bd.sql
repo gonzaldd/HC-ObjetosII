@@ -42,15 +42,7 @@ insert into profesional(idEspecialidad,matriculaProfesional,activoProfesional) v
 (6,1212,true),
 (6,1313,true),
 (7,1414,true),
-(1,1515,true),
-(2,1616,true),
-(3,1717,true),
-(4,1818,true),
-(5,1919,true),
-(6,2020,true),
-(7,2121,true),
-(7,2323,true),
-(7,2424,true);
+(7,1515,true);
 
 /*paciente*/
 insert into paciente(nombrePaciente, apellidoPaciente,activoPaciente, dniPaciente) values
@@ -147,22 +139,13 @@ insert into contactopaciente (idPaciente, telefonoPaciente,direccionPaciente,mai
 (7,'1577777777','Balcarce 723', 'fl@gmail.com','1986-12-04','arg'),
 (8,'1588888888','Misiones 259', 'cp@gmail.com','1959-08-18','arg'),
 (9,'1599999999','Tucuman 1028', 'rc@gmail.com','1972-03-26','arg'),
-(10,'1511111111','Laprida 123', 'jp@gmail.com','1972-08-21','arg'),
-(11,'1522222222','Loria 456', 'sg@gmail.com','1985-01-05','arg'),
-(12,'1533333333','J B Justo 890', 'pr@gmail.com','1945-06-15','arg'),
-(13,'1544444444','Bolaños 521', 'cd@gmail.com','1995-11-22','arg'),
-(14,'1555555555','San Martin 180', 'jr@gmail.com','1975-04-09','arg'),
-(15,'1566666666','Yapeyu 789', 'lg@gmail.com','1996-05-25','arg'),
-(16,'1577777777','Balcarce 723', 'fl@gmail.com','1986-12-04','arg'),
-(17,'1588888888','Misiones 259', 'cp@gmail.com','1959-08-18','arg'),
-(18,'1599999999','Tucuman 1028', 'rc@gmail.com','1972-03-26','arg'),
-(19,'1510101010','9 De Julio 256', 'es@gmail.com','1999-08-14','arg');
+(10,'1510101010','9 De Julio 256', 'es@gmail.com','1999-08-14','arg');
 
 
 /*contacto profesional*/
 insert into contactoprofesional (idProfesional, telefonoProfesional,direccionProfesional,mailProfesional, fechaDeNacimiento)values
-(1,'1512121212','Azcuenaga 789 ','prof1@gfdgdf.com', '1956-08-21'),
-(2,'1513131313','Tolasa 123', 'prof2@gfdgdf.com', '1972-10-08'),
+(1,'1512121212','Azcuenaga 789 ','brunojairbarros@hotmail.com', '1956-08-21'),
+(2,'1513131313','Tolasa 123', '19esteban92@gmail.com', '1972-10-08'),
 (3,'1514141414','Formosa 1059', 'prof3@gfdgdf.com', '1986-02-25'),
 (4,'1515151515','Granaderos 871', 'prof4@gfdgdf.com', '1966-05-15'),
 (5,'1516161616','Balcace 421', 'prof5@gfdgdf.com', '1980-01-01'),
@@ -174,15 +157,7 @@ insert into contactoprofesional (idProfesional, telefonoProfesional,direccionPro
 (11,'1524242424','Uriarte 478', 'prof11@gfdgdf.com', '1974-08-09'),
 (12,'1525252525','Zarate 1028', 'prof12@gfdgdf.com', '1964-11-06'),
 (13,'1526262626','Bariloche 512', 'prof13@gfdgdf.com', '1985-06-05'),
-(14,'1527272727','Yrigoyen 2048', 'prof14@gfdgdf.com', '1961-02-22'),
-(15,'1524242424','Uriarte 478', 'prof15@gfdgdf.com', '1974-08-09'),
-(16,'1525252525','Zarate 1028', 'prof16@gfdgdf.com', '1964-11-06'),
-(17,'1525252525','Zarate 1028', 'prof17@gfdgdf.com', '1964-11-06'),
-(18,'1526262626','Bariloche 512', 'prof18@gfdgdf.com', '1985-06-05'),
-(19,'1526262626','Bariloche 512', 'Gonzalodedomingo@gmail.com', '1985-06-05'),
-(20,'1526262626','Bariloche 512', 'brunojairbarros@hotmail.com', '1985-06-05'),
-(21,'1526262626','Bariloche 512', '19esteban92@gmail.com', '1985-06-05'),
-(22,'1526262626','Bariloche 512', 'alejandravranic@gmail.com', '1985-06-05');
+(14,'1527272727','Yrigoyen 2048', 'prof14@gfdgdf.com', '1961-02-22');
 
 
 /*login*/
@@ -207,8 +182,7 @@ insert into login(usuarioLogin,claveLogin,ultimoIngresoLogin,ultimoCambioClaveLo
 (1919,'abc1919','2015-05-24', '2015-04-01', 0,true),
 (35686181,'35686181g','2015-05-24', '2015-04-01', 0,true),
 (37686735,'37686735b','2015-05-24', '2015-04-01', 0,true),
-(36982749,'36982749e','2015-05-24', '2015-04-01', 0,true),
-(14790717,'14790717m','2015-05-24', '2015-04-01', 0,true);
+(36982749,'36982749e','2015-05-24', '2015-04-01', 0,true);
 
 /*usuario*/
 insert into usuario(idLogin, nombreUsuario, apellidoUsuario, dniUsuario, idProfesional) values
@@ -226,11 +200,10 @@ insert into usuario(idLogin, nombreUsuario, apellidoUsuario, dniUsuario, idProfe
 (12,'Mariana', 'Fernandez', 55555555, 12),
 (13,'Julio', 'Paz', 55555555, 13),
 (14,'Mirta', 'Renzo', 55555555, 14),
-(15,'Mirta', 'Renzo', 55555555, 15),
-(16,'Mirta', 'Renzo', 55555555, 16),
-(17,'Mirta', 'Renzo', 55555555, 17),
-(18,'Mirta', 'Renzo', 55555555, 18),
-(19,'Gonzalo', 'De Domingo', 35686181, 19),
-(20,'Bruno', 'Barros', 37686735, 20),
-(21,'Esteban', 'Rodriguez', 36982749, 21),
-(22,'Maria Alejandra', 'Vranic',14790717, 22);
+(15,'Mirta', 'Renzo', 55555555, 14),
+(16,'Mirta', 'Renzo', 55555555, 14),
+(17,'Mirta', 'Renzo', 55555555, 14),
+(18,'Mirta', 'Renzo', 55555555, 14),
+(19,'Gonzalo', 'De Domingo', 55555555, 2),
+(20,'Bruno', 'Barros', 55555555, 3),
+(21,'Esteban', 'Rodriguez', 55555555, 4);

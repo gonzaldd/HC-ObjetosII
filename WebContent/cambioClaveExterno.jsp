@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -5,7 +7,7 @@
   <link rel="stylesheet" href="static/css/bootstrap.min.css">
   <link rel="stylesheet" href="static/css/jquery.bxslider.css">
   <link rel="stylesheet" href="static/css/estilos.css">
-<title>Agregar consulta</title>
+<title>Cambio de clave</title>
 </head>
 <body>
 	<header>
@@ -28,11 +30,10 @@
 		          	<li class="dropdown">
 		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-labelledby="dLabel">Funciones<span class="caret"></span></a>
 			            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-			              <li><a href="#">Agregar consulta</a></li>
+			             
+			              <li><a href="/HC/historiaClinicaExterno.html">Buscar historia clínica</a></li>
 			              <li class="divider"></li>
-			              <li><a href="/HC/historiaClinica.html">Buscar historia clínica</a></li>
-			              <li class="divider"></li>
-			              <li><a href="/HC/consultasEntreFechas.html">Ver consultas entre fechas</a></li>
+			              <li><a href="/HC/consultasEntreFechasExterno.html">Ver consultas entre fechas</a></li>
 						  <li class="divider"></li>
 			              <li class="dropdown-submenu">
 			                <a tabindex="-1" href="#">Ver estadísticas de consultas</a>
@@ -45,14 +46,14 @@
 			                        <li><a href="#">Link de tercer nivel</a></li>
 			                    </ul> -->
 			                  </li>
-			                  <li><a href="/HC/mostrarEstadisticas">Estadística dinámica</a></li>
+			                  <li><a href="/HC/mostrarEstadisticasExterno">Estadística dinámica</a></li>
 			                </ul>
 			              </li>
 			            </ul>
 		            <li class="dropdown">
 		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Mi perfil<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="/HC/cambioClave.jsp">Cambiar clave</a></li>
+									<li><a href="#">Cambiar clave</a></li>
 									<!-- La clase "divider" sirve para poner un separador-->
 									<li class="divider"></li>
 									<li><a href="/HC/login" value="Salir">Cerrar sesión</a></li>
@@ -60,7 +61,7 @@
 		          </ul>
 
 
-		          	<form method="post" action="/HC/MostrarHistoriaClinica" class="navbar-form navbar-right" role="search">
+		          	<form method="post" action="/HC/MostrarHistoriaClinicaExterno" class="navbar-form navbar-right" role="search">
 						<div class="form-group">
 							<input type="text" name="dniPaciente" class="form-control" placeholder="Buscar historia clínica...">
 						</div>
@@ -79,26 +80,28 @@
       <img src="static/img/logo.jpg" HEIGHT="100" WIDTH="100" align="left"/>
     </figure>
     </div>
+    
+  <div class="container">
+  	<h2 align="center"><span style="color:#8E0229; font-weight: bold;">Cambio de clave</span></h2>
+	<hr>
+	
+  	<form method="POST" action="/HC/cambioClave" class="navbar-form navbar-left" role="form">
+      	<div class="input-group">
+      		<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      		<input  type="number" class="form-control"  name="user" placeholder="Usuario" autofocus>
+      				
+      		<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      		<input type="password" class="form-control" name="passActual" placeholder="Contraseña actual">
+      		
+      		<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      		<input type="password" class="form-control" name="passNueva" placeholder="Contraseña nueva">
+      	</div>
+      			<button id="inicio" type="submit" class="btn btn-primary"><a href="/HC/resultadoLogin.jsp"><span style="color: #FFFFFF; cursor:pointer;">Cambiar de clave</span></a></button>
+    </form>
+      		
+
+  </div>
   
-	<div class="container">
-	    <h2 align="center"><span style="color:#8E0229; font-weight: bold;">Agregar consulta</span></h2>
-	    <hr>
-	    
-	    <p><span style="color: #8E0229; font-weight: bold;">El ingreso de la fecha tiene que tener el formato DD/MM/AAAA, por ejemplo: 15/03/2015.</p><br>
-
-			<form method="POST" action="/HC/AgregarConsulta ">
-			
-			<input  class="form-control"  name="dniPaciente" placeholder="DNI paciente" autofocus><br>
-			<input  class="form-control"  name="idProfesional" placeholder="ID profesional"><br>
-			<input  class="form-control"  name="idCategoriaDeConsulta" placeholder="ID categoría de consulta"><br>
-			<input  class="form-control"  name="fechaDeAtencion" placeholder="Fecha de atención"><br>
-			<textarea name="diagnostico" rows="10" cols="30" class="form-control" placeholder="Escriba el diagnóstico..."></textarea><br><br>
-			<button id="inicio" type="submit" class="btn btn-primary"><span style="color: #FFFFFF; cursor:pointer;">Agregar consulta</span></button>
-			</form>
-
-
-</div>
-
   <div>
 	<footer>
 		<div class="container">
@@ -115,8 +118,8 @@
 	      </div>
 	    </div>
 	</footer>
-	</div>
-	
+  </div>
+
 
 
   <script src="static/js/jquery.js"></script>

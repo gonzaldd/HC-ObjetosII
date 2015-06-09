@@ -34,7 +34,7 @@ public class ControladorLogin extends HttpServlet {
 		String pass = request.getParameter("pass");
 		String ip = InetAddress.getLocalHost().getHostAddress();
 		String ipInet1 = "169.254.196.78"; // Barros
-		String ipInet2 = "192.168.24.100"; // Cascardo
+		String ipInet2 = "192.168.24.200"; // Cascardo
 		String ipInet3 = "192.168.79.133"; // Rodriguez
 
 		String resultado = "";
@@ -47,18 +47,18 @@ public class ControladorLogin extends HttpServlet {
 					
 					
 					if(login.passValida(pass, l)) {			//4
-						if(Funciones.comparadorIps(ip,ipInet1)==0 || (Funciones.comparadorIps(ip,ipInet2)==0)
-							|| (Funciones.comparadorIps(ip,ipInet3)==0)){		//5
+						if(Funciones.comparadorIps(ip,ipInet2)==0 || (Funciones.comparadorIps(ip,ipInet2)==0)
+							|| (Funciones.comparadorIps(ip,ipInet2)==0)){		//5
 							sesion.setAttribute("usuario", usuario);
 							request.getRequestDispatcher("/logueoExitoso.jsp").forward(request ,response);
 							
 							
 			/*5*/		}	
-						else if(Funciones.comparadorIps(ip,ipInet1)!=0 && (Funciones.comparadorIps(ip,ipInet2)!=0)
-								&& (Funciones.comparadorIps(ip,ipInet3)!=0)){  //6
+						else if(Funciones.comparadorIps(ip,ipInet2)!=0 && (Funciones.comparadorIps(ip,ipInet2)!=0)
+								&& (Funciones.comparadorIps(ip,ipInet2)!=0)){  //6
 							
 							sesion.setAttribute("usuario", usuario);
-							request.getRequestDispatcher("/logueoExterno.jsp").forward(request ,response);
+							request.getRequestDispatcher("/logueoExitosoExterno.jsp").forward(request ,response);
 			/*6*/			} 
 
 						

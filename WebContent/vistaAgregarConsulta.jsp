@@ -80,6 +80,13 @@
 	    </nav>      
   </header>
   
+    <div>
+      <figure>
+      <img src="static/img/logo.jpg" HEIGHT="100" WIDTH="100" align="left"/>
+    </figure>
+    </div>
+  
+  
 
 <% Paciente paciente=(Paciente)request.getAttribute("paciente"); %>
 

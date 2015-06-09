@@ -35,11 +35,10 @@
 		          	<li class="dropdown">
 		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-labelledby="dLabel">Funciones<span class="caret"></span></a>
 			            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-			              <li><a href="/HC/agregarConsulta.html">Agregar consulta</a></li>
+			             
+			              <li><a href="/HC/historiaClinicaExterno.html">Buscar historia clínica</a></li>
 			              <li class="divider"></li>
-			              <li><a href="/HC/historiaClinica.html">Buscar historia clínica</a></li>
-			              <li class="divider"></li>
-			              <li><a href="/HC/consultasEntreFechas.html">Ver consultas entre fechas</a></li>
+			              <li><a href="#">Ver consultas entre fechas</a></li>
 						  <li class="divider"></li>
 			              <li class="dropdown-submenu">
 			                <a tabindex="-1" href="#">Ver estadísticas de consultas</a>
@@ -59,7 +58,7 @@
 		            <li class="dropdown">
 		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Mi perfil<span class="caret"></span></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="/HC/cambioClave.jsp">Cambiar clave</a></li>
+									<li><a href="/HC/cambioClaveExterno.jsp">Cambiar clave</a></li>
 									<!-- La clase "divider" sirve para poner un separador-->
 									<li class="divider"></li>
 									<li><a href="/HC/login" value="Salir">Cerrar sesión</a></li>
@@ -67,7 +66,7 @@
 		          </ul>
 
 
-		          	<form method="post" action="/HC/MostrarHistoriaClinica" class="navbar-form navbar-right" role="search">
+		          	<form method="post" action="/HC/MostrarHistoriaClinicaExterno" class="navbar-form navbar-right" role="search">
 						<div class="form-group">
 							<input type="text" name="dniPaciente" class="form-control" placeholder="Buscar historia clínica..." autofocus>
 						</div>
@@ -87,6 +86,7 @@
       <img src="static/img/logo.jpg" HEIGHT="100" WIDTH="100" align="left"/>
     </figure>
     </div>
+  
   
 
 

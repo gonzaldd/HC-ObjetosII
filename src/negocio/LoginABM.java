@@ -118,7 +118,7 @@ public class LoginABM {
             // Se compone el adjunto con el archivo (puede ser una imagen o cualquier otor archivo)
             BodyPart adjunto = new MimeBodyPart();
             adjunto.setDataHandler(
-            		new DataHandler(new FileDataSource("D:/OO2/workspace/HC/WebContent/static/img/1.jpg")));
+            		new DataHandler(new FileDataSource("C:/Users/Seba/Desktop/zxc/HC/WebContent/static/img/logo.jpg")));
             adjunto.setFileName("1.jpg");
             /*
             // Crear tantos MimeBodyPart como archivos adjuntos
@@ -184,7 +184,7 @@ public class LoginABM {
             // Se compone el adjunto con el archivo (puede ser una imagen o cualquier otor archivo)
             BodyPart adjunto = new MimeBodyPart();
             adjunto.setDataHandler(
-            		new DataHandler(new FileDataSource("D:/OO2/workspace/HC/WebContent/static/img/1.jpg")));
+            		new DataHandler(new FileDataSource("C:/Users/Seba/Desktop/zxc/HC/WebContent/static/img/logo.jpg")));
             adjunto.setFileName("1.jpg");
             /*
             // Crear tantos MimeBodyPart como archivos adjuntos

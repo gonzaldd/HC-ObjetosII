@@ -11,7 +11,7 @@ pageEncoding="ISO-8859-1"%>
 <title>HC Consulta</title>
 </head>
 <BODY>
-<%@ include file="/cabecera.jsp" %>
+
 
 <% Consulta consulta=(Consulta)request.getAttribute("consulta"); %>
 <BR>

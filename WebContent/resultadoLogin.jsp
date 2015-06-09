@@ -52,6 +52,11 @@
     </nav>      
   </header>
 
+  <div>
+      <figure>
+      <img src="static/img/logo.jpg" HEIGHT="100" WIDTH="100" align="left"/>
+    </figure>
+    </div>
   
   <div class="container">
   	<h2 align="center"><span style="color:#8E0229; font-weight: bold;">Inicio de sesión incorrecto</span></h2>
